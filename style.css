@@ -13,6 +13,9 @@
     position: relative;
 }
 
+body{
+    background-color: #d9d9d9;
+}
 nav {
     display: flex;
     padding: 2% 4%;
@@ -146,25 +149,32 @@ img {
     margin-bottom: 5%;
     padding: 25px 16px;
     box-sizing: border-box;
-    transition: 0.3s;
+    transition: 0.3s ease;
     cursor:pointer;
     text-decoration: none;
     text-decoration-color: none;
+    overflow:hidden;
 }
 
 .prom-col:hover {
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
 }
 
-.prom-col:hover::before {
+.prom-col::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255);
+    opacity:0;
     z-index: 1;
+    transition: 0.3s ease;
+}
+
+.prom-col:hover::before {
+    opacity:0.12;
 }
 
 .prom-col .content{
@@ -173,7 +183,10 @@ img {
 }
 
 .prom-col img{
+    width: 100px;
+    height: 100px;
     margin-left: 10px;
+    background-size: cover;
 }
 
 .prom-col#prom-loyalty{
@@ -190,3 +203,123 @@ img {
     border-radius: 3px 50px 10px 50px;
     background:#86705e;
 }
+
+/* slider merch */
+
+.container{
+    padding:10px 32px;
+    display:flex;
+    justify-content: flex-start;
+}
+
+.slider-wrapper{
+    position:relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    margin-left: 0;
+    padding-left: 10rem;
+}
+
+.slider{
+    display: flex;
+    width: 240px;
+    height: 587px;
+    border-radius: 5px;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 10px 15px 3px rgba(21, 30, 70, 0.9);
+}
+
+.slider img{
+    flex: none;
+    width:100%;
+    min-height:587px;
+    scroll-snap-align: start;
+    object-fit:cover;
+    margin-left:0;
+}
+
+.buttons{
+    position: absolute;
+    top: 45%;
+    left:41%;
+    width:58%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button{
+    width: 35px;
+    height: 35px;
+    border-radius: 40%;
+    background-color: #7f5734;
+    opacity:0.45;
+    color: #ffffffdb;
+    border:none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 250ms ease; /* Added transition property */
+}
+
+.buttons button:hover{
+    opacity:0.8;
+}
+
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom:1.25rem;
+    left:70%;
+    transform:translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a{
+    width:15px;
+    height:10px;
+    border-radius: 20%;
+    background-color: #654b35;
+    opacity: 0.65;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+    opacity:1;
+}
+
+.merch-content {
+    display:flex;
+    flex-direction: column;
+    flex-direction: flex-start;
+    max-height: 50em;
+    padding: 10vh 5vw;
+    text-align: left;
+    margin-left: 0;
+}
+
+.merch-content h2{
+    padding: 4vh 0 1vh 0;
+    font-size: 36px;
+    font-weight: 600;
+    color: #301d0c;
+}
+
+/* line */
+
+.line{
+    max-width: 50%;
+    height:4px;
+    border:4vh 0;
+    background-color: #4a3420;
+}
+
+.merch-content p{
+    display:inline-block;
+    color:#86705e;
+    padding: 3vh 0;
+    font-size: 24px;
+}
+
