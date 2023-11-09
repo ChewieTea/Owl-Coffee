@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Playfair Display', monospace;
+    font-size: 24px;
 }
 
 .header {
@@ -208,7 +209,7 @@ img {
 /* slider merch */
 
 .container{
-    padding:10px 32px;
+    padding:10px 32px 2rem;
     display:flex;
     justify-content: flex-start;
 }
@@ -243,9 +244,9 @@ img {
 
 .buttons{
     position: absolute;
-    top: 45%;
-    left:41%;
-    width:58%;
+    top: 50%;
+    left:51%;
+    width:48%;
     display: flex;
     justify-content: space-between;
 }
@@ -273,7 +274,7 @@ img {
     column-gap: 1rem;
     position: absolute;
     bottom:1.25rem;
-    left:70%;
+    left:75%;
     transform:translateX(-50%);
     z-index: 1;
 }
@@ -341,7 +342,128 @@ img {
 
 .hero-btn:hover{
     background-color:#4e3123;
-    border: 2px solid #4e3123;
+    border: 3px solid #4e3123de;
     color:#fff;
     transition: .3s ease-in-out;
+}
+
+/* ## FOOTER ## */
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Update grid-template-columns */
+    grid-template-areas:
+        ". ft-logo ft-links ft-contact" /* Update grid-template-areas */
+        ". ft-logo ft-links ft-contact" /* Add missing dot */
+        ". ft-logo ft-links ft-contact" /* Add missing dot */
+        ". ft-icons ft-links ft-contact"; /* Add missing dot */
+
+    background-color: #301d0c;
+    color:#fffb;
+}
+
+.footer .ft-icons{ /*icons*/
+    padding: 1.3rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer .ft-icons a{
+    cursor:default;
+}
+
+.footer .ft-icons img{ /*footer image*/
+    width: 9rem;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.footer .ft-icons i{ /*footer icons*/
+    font-size: 2rem;
+    padding: 2px 3px 0 4px;
+    cursor:pointer;
+}
+
+.footer .ft-links{ /*footer links*/
+    display: flex;
+    align-items: center;
+    padding:1rem 0;
+}
+
+.footer .ft-links .ft-line{
+    padding:0;
+    width: 3px;
+    height: 6rem;
+    align-items: center;
+    background-color:#86705e;
+    border-radius: 1px;
+}
+
+.footer .ft-links a{ 
+    color:#fffb;
+    text-decoration: none;
+    margin-left: 0.7rem;
+}
+
+.footer .ft-contact{ /*footer contact information*/
+    padding:1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.ft-contact .ft-line{ /*line*/
+    position:absolute;
+    align-self: center;
+    width: 3.5px;
+    height: 8rem;
+    background-color:#86705e;
+    border-radius: 1px;
+}
+
+.ft-contact .content { /* content for the contact section */
+    padding: 0 0 1rem 1.5rem;
+}
+
+.ft-contact .content * {
+    margin: 0.5rem 0 0 0;
+}
+
+.ft-contact .line{ /* Underline CONTACT US */
+    width: 8rem;
+    height:5px;
+    display: flex;
+    align-items:center;
+    background-color:#86705e;
+    border-radius: 30px 2px;
+}
+
+.ft-contact .content h3{
+    font-weight: 550;
+}
+
+
+.ft-contact .content p{
+    display:flex;
+    align-items:center;
+    font-size:22px ;
+    font-weight: 500;
+}
+
+.ft-contact .content .ft-btn{ /*footer ft button*/
+    position: absolute;
+    margin-top: 0.5rem;
+    padding: 3px 20px;
+    color: #fffb;
+    font-weight: 300;
+    text-decoration:none;
+    border:1px solid #fffb;
+    border-radius: 15px 4px;
+}
+
+.ft-contact .content .ft-btn:hover{
+    background-color: #86705e;
+    color:#000;
+    border: #86705e;
+    transition: .3s ease;
 }
