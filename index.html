@@ -21,7 +21,7 @@
         <a href="index.html"><img src="media/owl_logo1.jpg" alt="Owl Coffee's logo. An owl in a coffee cup with yellow text bellow saying OWL COFFEE'S"></a> <!-- Adds bagel as clickable icon to the webpage-->
         <h1 class="nav-title">Owl Coffee</h1>
         <div class="nav-links" id="navLinks">
-            <i class="material-icons" onclick="hideMenu()">close</i>     <!-- Adds Menu icon for phone version (made phone version using @media in style.css)-->
+        <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>     <!-- Adds Menu icon for phone version (made phone version using @media in style.css)-->
             <ul>        <!-- List of options which will be our menu/navigation for the website-->
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="">MERCH</a></li>
@@ -30,7 +30,8 @@
                 <li><a href="">CART</a></li>
             </ul>
         </div>
-    
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
 <div class="slogan">
     <h1>Owl I need is Coffee</h1>
 </div>
@@ -140,8 +141,18 @@
 
 
 
-
+<!-- ## JS ## -->
 <script src="aijs.js"></script>
+<!-------- Javascript for Toggle Menu -------->
+<script>
+    var navLinks = document.getElementById("navLinks")
+   function showMenu(){
+       navLinks.style.right = "0";
+   }
+   function hideMenu(){
+       navLinks.style.right = "-200px";
+   }
+</script>
 </body>
 
 </html>
