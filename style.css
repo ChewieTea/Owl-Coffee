@@ -32,7 +32,7 @@ nav img {
 nav .nav-title{
     font-size: 64px;
     color: #ded4cb;
-    padding: 5px 15px;
+    padding: 5px 50px;
     text-decoration: #654b35 dotted underline;
     text-underline-offset: 17.5px;
     text-decoration-thickness: 6px;
@@ -493,16 +493,15 @@ nav .fa-solid {
 
 /*## media ## */
 
-@media(max-width: 700px) {
-    .header nav img{
+@media (max-width: 700px) {
+    .header nav img{    /* logo */
         width:30vw;
     }
-    nav .nav-title{
+    nav .nav-title{ /*title*/
         position:absolute;
-        top:28vh;
-        left:33vw;
-        /*transform:translate(-25%, -50%);*/
-        width:60vw;
+        transform: translate(0, 500%);
+        width:100%;
+        text-align: center;
         font-size: 30px;
         padding: 0;
         text-decoration: none;
@@ -510,32 +509,44 @@ nav .fa-solid {
 
     .slogan{
         padding:0;
+        
+        text-align: center;
     }
 
     .slogan h1{
         font-size: 20px;
+        
+        
     }
+    .slogan h1::before {
+        top: 0;
+        left: 4vh;
+        width: 100%;
+        height: 3.5px;
+        transform: translate(5%, 0%);
+    }
+    
+    /*menu*/
 
-    .nav-links ul li {
+    .nav-links ul li {  
         display: block;
     }
-
     nav .nav-links {
-        position:absolute;
+        position: fixed;
         background: #7c4462;
         height: 100vh;
         width: 200px;
         top: 0;
-        right: -200px;
+        right: 0px;
         text-align: left;
         z-index: 2;
-        transition: 0.3s ease;
+        transition: 0.3s;
     }
 
     nav .fa-solid {
         display: block;
-        color: #d6c2b0;
-        margin: 1rem;
+        color: #fff;
+        margin: 10px;
         font-size: 28;
         width: 40px;
         cursor: pointer;
