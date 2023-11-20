@@ -20,27 +20,28 @@ body{
 nav {
     display: flex;
     padding: 2% 4%;
-    justify-content: space-between;
     align-items: center;
 }
 
 nav img {
+    flex:initial;
     width: 200px;
     border-radius: 15px;
 }
 
 nav .nav-title{
-    font-size: 64px;
+    flex:initial;
+    font-size: 42px;
     color:#eae3dd;
     padding: 5px 15px;
-    text-decoration: #654b35 dotted underline;
+    text-decoration: #654b35 underline dashed;
     text-underline-offset: 17.5px;
-    text-decoration-thickness: 6px;
+    text-decoration-thickness: 4.5px;
 }
 
 
 .nav-links {
-    flex: 1;
+    margin-left: auto;  
     text-align: right;
 }
 
@@ -72,39 +73,35 @@ nav .nav-title{
 }
 
 .slogan {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-70%, 50%);
+    position: relative;
     text-align: center;
 }
 
 .slogan h1{
-    width: 60%;
-    padding-top: 6px;
-    display:inline-block;
-    font-size: 36px;
-    color: #ded4cb;
     position: relative;
+    display:inline-block;
+    padding-top: 6px;
     text-align: center;
     white-space: nowrap;
+    font-size:28px;
+    color: #ded4cb;
 }
 
-.slogan h1::before {
+.slogan::before {
     content: "";
-    position: absolute;
-    top: 0;
-    left: 60px;
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-3.4vh) scaleX(0.2);
     width: 100%;
     height: 3.5px;
     border-radius: 15px;
     background-color: #654b35;
-    transform: scaleX(0.5);
     transition: transform 0.3s ease-in-out;
 }
 
-.slogan h1:hover::before {
-    transform: scaleX(2);
+.slogan:hover::before {
+    transform:translateY(-3.2vh) scaleX(0.5);
 }
 
 /* Promotions section */
@@ -297,6 +294,7 @@ img {
     flex-direction: column;
     flex-direction: flex-start;
     max-height: 50em;
+    max-width:40vw;
     padding: 10vh 5vw;
     text-align: left;
     margin-left: 0;
@@ -309,8 +307,8 @@ img {
     color: #301d0c;
 }
 
-.line{ /* line */
-    max-width: 90%;
+.merch-content .line{ /* line */
+    width: 90%;
     height:5px;
     border:4vh 0;
     background-color: #4e3123;
@@ -330,7 +328,7 @@ img {
     padding: 10px 20px;
     text-align: center;
     background-color:#86705e;
-    border: 3px solid #4e3123de;
+    border: 3px solid #4e3123;
     border-radius: 15px 4px;
     color:#1b0a02;
     font-weight: 700;
@@ -345,6 +343,9 @@ img {
     transition: .3s ease-in-out;
 }
 
+/* coffee icon */
+
+
 /* ## FOOTER ## */
 
 .footer {
@@ -354,42 +355,45 @@ img {
         ". ft-logo ft-links ft-contact" /* Update grid-template-areas */
         ". ft-logo ft-links ft-contact" /* Add missing dot */
         ". ft-logo ft-links ft-contact" /* Add missing dot */
-        ". ft-icons ft-links ft-contact"; /* Add missing dot */
+        ". ft-icons ft-links ft-contact"; /* Add missing dot *//*
 
     background-color: #301d0c;
     color:#fffb;
 }
 
-.footer .ft-icons{ /*icons*/
+.ft-icons{ /*icons*/
     padding: 1.3rem 1rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.footer .ft-icons a{
+.ft-icons a{
     cursor:default;
 }
 
-.footer .ft-icons img{ /*footer image*/
+/*footer image*/
+.ft-icons img{ 
     width: 9rem;
     overflow:hidden;
     cursor:pointer;
 }
 
-.footer .ft-icons i{ /*footer icons*/
+/*footer icons*/
+.ft-icons i{ 
     font-size: 2rem;
     padding: 2px 3px 0 4px;
     cursor:pointer;
 }
 
-.footer .ft-links{ /*footer links*/
+/*footer links*/
+.ft-links{ 
     display: flex;
     align-items: center;
     padding:1rem 0;
 }
 
-.footer .ft-links .ft-line{
+.ft-line{
     padding:0;
     width: 3px;
     height: 6rem;
@@ -398,19 +402,20 @@ img {
     border-radius: 1px;
 }
 
-.footer .ft-links a{ 
+.ft-links a{ 
     color:#fffb;
     text-decoration: none;
     margin-left: 0.7rem;
 }
 
-.footer .ft-contact{ /*footer contact information*/
+/*footer contact information*/
+.ft-contact{ 
     padding:1rem;
     display: flex;
     flex-direction: row;
 }
 
-.ft-contact .ft-line{ /*line*/
+.ft-line{ /*line*/
     position:absolute;
     align-self: center;
     width: 3.5px;
@@ -419,15 +424,15 @@ img {
     border-radius: 1px;
 }
 
-.ft-contact .content { /* content for the contact section */
+.content { /* content for the contact section */
     padding: 0 0 1rem 1.5rem;
 }
 
-.ft-contact .content * {
+.content * {
     margin: 0.5rem 0 0 0;
 }
 
-.ft-contact .line{ /* Underline CONTACT US */
+.line{ /* Underline CONTACT US */
     width: 8rem;
     height:5px;
     display: flex;
@@ -436,19 +441,25 @@ img {
     border-radius: 30px 2px;
 }
 
-.ft-contact .content h3{
+ .content a{
+    text-decoration: none;
+}
+
+ .content h3{
+    font-size: 24px;
     font-weight: 550;
+    text-decoration: none;
 }
 
 
-.ft-contact .content p{
+ .content p{
     display:flex;
     align-items:center;
     font-size:22px ;
     font-weight: 500;
 }
 
-.ft-contact .content .ft-btn{ /*footer ft button*/
+ .content .ft-btn{ /*footer ft button*/
     position: absolute;
     margin-top: 0.5rem;
     padding: 3px 20px;
@@ -459,9 +470,9 @@ img {
     border-radius: 15px 4px;
 }
 
-.ft-contact .content .ft-btn:hover{
+ .content .ft-btn:hover{
     background-color: #86705e;
-    color:#000;
+    color: #301d0c;
     border: #86705e;
     transition: .3s ease;
 }
@@ -491,7 +502,7 @@ nav .fa-solid {
 
 /*## media ## */
 
-@media(max-width: 700px) {
+@media(max-width: 800px) {
     .header{
         min-height: 35vh;
     }
@@ -547,10 +558,21 @@ nav .fa-solid {
         transition: 0.3s ease;
     }
 
-    nav .fa-solid {
+    .fa-solid#menu{
         display: block;
+        margin:auto;
+        margin-right: 5vw;
+        text-align: right;
         color: #d6c2b0;
-        margin: 1rem;
+        font-size: 28;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .fa-solid#close{
+        display: block;
+        margin: 1.2rem;
+        color: #d6c2b0;
         font-size: 28;
         width: 40px;
         cursor: pointer;
@@ -574,7 +596,7 @@ nav .fa-solid {
         text-decoration: underline 3px dashed #d0a172;
     }
 
-    p{
+    .prom-col p{
         display:none;
     }
 
@@ -617,7 +639,7 @@ nav .fa-solid {
     }
 
     .slider-wrap{
-        position:;
+        position:relative;
         align-tracks: center;
         padding-left:0;
     }
@@ -663,6 +685,7 @@ nav .fa-solid {
 
     .merch-content {
         display:flex;
+        max-width: 95vw;
         padding: 1vh 3vw;
         text-align:center;
     }
@@ -673,7 +696,8 @@ nav .fa-solid {
     }
 
     .line{ /* line */
-        max-width: 100%;
+        max-width: 75%;
+        align-self: center;
     }
 
     .merch-content p{
@@ -688,5 +712,85 @@ nav .fa-solid {
         align-self: center;
         font-size: 16px;
     }
+
+    /* ### Footer ### */
+
+    .footer {
+        display: grid;
+        grid: repeat(2, 2.4rem) / auto-flow 2.4rem; /* Update grid-template-columns */
+        grid-template-columns: 1fr 2fr;
+        background-color: #301d0c;
+        color:#fffb;
+        padding:1.4em 2em 2em 2em;
+    }
+
+    .footer h3{
+        padding:0;
+        font-size: 24px;
+
+    }
+
+    .ft-icons, .ft-links{
+        padding: 0 0.6rem;
+    }
+
+    .ft-icons{
+        padding: 0rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .ft-icons i{ /*footer icons*/
+        font-size: 1.2rem;
+        padding: 1px 0;
+        cursor:pointer;
+    }
+    
+
+    .ft-icons img{
+        display:none;
+    }
+
+    .ft-links .ft-line{
+        display:none;
+    }
+
+    .ft-links a{
+        margin:0;
+        padding: 0 1em;
+        font-size: 22px;
+    }
+
+    .ft-links ul li {
+        list-style: none;
+        text-align: left;
+        justify-content:left;
+       
+    }
+
+    .ft-contact .ft-line{
+    padding:0;
+    width: 3px;
+    height: 6rem;
+    align-items: center;
+    background-color:#86705e;
+    border-radius: 1px;
+    }
+
+    .ft-contact{
+        grid-row-start: span 2;
+        padding:0;
+    }    
+
+    .content { /* content for the contact section */
+        padding: 0 1em;
+    }
+
+    .content * {
+        margin: 0;
+    }
+
+
 
 }
