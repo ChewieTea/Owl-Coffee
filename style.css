@@ -355,8 +355,7 @@ img {
         ". ft-logo ft-links ft-contact" /* Update grid-template-areas */
         ". ft-logo ft-links ft-contact" /* Add missing dot */
         ". ft-logo ft-links ft-contact" /* Add missing dot */
-        ". ft-icons ft-links ft-contact"; /* Add missing dot *//*
-
+        ". ft-icons ft-links ft-contact"; /* Add missing dot */
     background-color: #301d0c;
     color:#fffb;
 }
