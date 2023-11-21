@@ -72,6 +72,10 @@ nav .nav-title{
     width: 100%;
 }
 
+.slogan #media-title{
+    display:none;
+}
+
 .slogan {
     position: relative;
     text-align: center;
@@ -87,7 +91,7 @@ nav .nav-title{
     color: #ded4cb;
 }
 
-.slogan::before {
+.slogan #slogan::before {
     content: "";
     position:absolute;
     right:0;
@@ -100,7 +104,7 @@ nav .nav-title{
     transition: transform 0.3s ease-in-out;
 }
 
-.slogan:hover::before {
+.slogan #slogan:hover::before {
     transform:translateY(-3.2vh) scaleX(0.5);
 }
 
@@ -503,42 +507,66 @@ nav .fa-solid {
 
 @media(max-width: 800px) {
     .header{
-        min-height: 35vh;
+        min-height: 25vh;
+    }
+
+    nav{
+        padding: 1% 1%;
     }
 
     .header nav img{
-        width:30vw;
+        width:25vw;
     }
     nav .nav-title{
-        position:absolute;
-        top: 0%;
-        left: 0%;
-        transform: translate(60%,20vh);
-        width:60vw;
-        font-size: 30px;
-        padding: 0;
-        text-decoration: none;
+        display:none;
+        /*position:absolute;
+        display:inline-block;
+        top:50%;
+        left:50%;
+        translate:translate(-50%, -50%);
+        font-size:24px;
+        text-decoration: none;*/
+
     }
 
     .slogan{
         padding:0;
+        position:relative;
     }
 
     .slogan h1{
-        font-size: 20px;
+        padding:10px;
+        font-size:20px;
+        font-weight: 300;
     }
 
-    .slogan h1::before {
+    .slogan h1#media-title{
+        padding-bottom:10px;
+        font-size: 26px;
+        font-weight: 600;
+    }
+    .slogan #media-title{
+        display:inline-block;
+        position:absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -120%);
+    }
+
+    .slogan #slogan::before {
         content: "";
-        position: absolute;
-        top: 0;
-        left: 40px;
-        transform: scaleX(0.3);
+        position:absolute;
+        transform:translateY(-2.2vh) scaleX(0.2);
+        width: 100%;
+        height: 3.5px;
+        border-radius: 15px;
+        background-color: #654b35;
         transition: transform 0.3s ease-in-out;
     }
     
-    .slogan h1:hover::before {
-        transform: scaleX(0.8);
+    .slogan #slogan:hover::before {
+        transform:translateY(-2vh) scaleX(0.5);
     }
 
     .nav-links ul li {
@@ -633,16 +661,16 @@ nav .fa-solid {
 
     .container{
         display:flex;
-        flex-direction: column;
-        position: relative;
+        flex-direction: column-reverse;
+        align-items:center;
+        justify-content: center;
     }
 
     .slider-wrap{
-        position:relative;
-        align-tracks: center;
-        padding-left:0;
+        position:flex;
+        margin: 0; /* I added this, there is no margin anywhere else, it should not require the margin to be 0 */
+        padding-left: 0;
     }
-
     .slider{
         margin-bottom: 1rem;
     }
@@ -678,12 +706,12 @@ nav .fa-solid {
     }
 
     /* merch content */
-    .merch-content{
-        position: relative;
-    }
 
     .merch-content {
-        display:flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Add this line */
+        justify-content: center; /* Add this line */
         max-width: 95vw;
         padding: 1vh 3vw;
         text-align:center;
@@ -696,7 +724,6 @@ nav .fa-solid {
 
     .line{ /* line */
         max-width: 75%;
-        align-self: center;
     }
 
     .merch-content p{
@@ -708,7 +735,6 @@ nav .fa-solid {
     .hero-btn{
         width:40vw;
         margin: 1.2vh 1.2vw 2vh;
-        align-self: center;
         font-size: 16px;
     }
 
@@ -720,7 +746,7 @@ nav .fa-solid {
         grid-template-columns: 1fr 2fr;
         background-color: #301d0c;
         color:#fffb;
-        padding:1.4em 2em 2em 2em;
+        padding:1.4em 0.5em 1em 0.5em;
     }
 
     .footer h3{
