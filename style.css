@@ -27,7 +27,7 @@ nav img {
     flex:initial;
     width: 200px;
     border-radius: 15px;
-    transition: .25s ease-in-out;
+    transition: .2s ease-in;
 }
 
 nav img:hover{
@@ -35,7 +35,12 @@ nav img:hover{
     transform: translateY(-2px);
 }
 
-.nav-title{
+h1{
+    font-size: 42px;
+    color:#eae3dd;
+}
+
+nav .nav-title{
     flex:initial;
     font-size: 42px;
     color:#eae3dd;
@@ -43,6 +48,12 @@ nav img:hover{
     text-decoration: #654b35 underline dashed;
     text-underline-offset: 17.5px;
     text-decoration-thickness: 4.5px;
+    transition: .3s ease;
+}
+
+nav .nav-title:hover{
+    transform:translateY(-4px);
+    text-shadow: rgba(82, 76, 69, 0.95) 2px 2px 15px;
 }
 
 
@@ -56,12 +67,17 @@ nav img:hover{
     display: inline-block;
     padding: 8px 12px;
     position: relative;
+    transition: .25s ease;
 }
 
 .nav-links ul li a {
     color: #eae3dd;
     text-decoration: none;
     font-size: 22px;
+}
+
+.nav-links ul li:hover{ 
+    transform: translateY(-4px);
 }
 
 .nav-links ul li::after {
