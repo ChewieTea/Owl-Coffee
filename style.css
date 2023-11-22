@@ -8,14 +8,15 @@
 .header {
     min-height: 45vh;
     width: 100%;
-    background-image: linear-gradient(rgba(72, 62, 27, 0.6), 5%, rgba(18, 9, 6, 0.9)),  url(media/coffee_banner.jpg) ;/*url for the background image/colour for the header */
+    background-image: linear-gradient(rgba(72, 62, 27, 0.2), 1%, rgba(18, 9, 6, 1)),  url(media/coffee_banner.jpg) ;/*url for the background image/colour for the header */
     background-position: center;
     background-size: cover;
     position: relative;
 }
 
 body{
-    background-color: #d9d9d9;
+    background-image: linear-gradient(rgba(18, 9, 6, 1), 2%, rgba(217, 217, 217, 0.6)),
+    url();
 }
 nav {
     display: flex;
@@ -131,11 +132,69 @@ nav .nav-title:hover{
     background-color: #3d302b;
 }
 
+
+/*.curve {
+    position:absolute;
+    height: 225px;
+    width:100%;
+    bottom:0;
+}
+
+.curve::before{
+    content:'';
+    display:block;
+    position:absolute;
+    border-radius: 100% 50%;
+    width:55%;
+    height:100%;
+    background-color: #301d0c;
+    transform: translate(85%,60%);
+
+}
+
+.curve::after {
+    content:'';
+    display:block;
+    position:absolute;
+    border-radius: 100% 50%;
+    width:55%;
+    height:100%;
+    background-color: #5e866a;
+    transform: translate(-4%,- 40%);
+}*/
+
+
+
+
 /* Promotions section */
 .promotions {
     margin: auto;
     text-align: center;
     padding-top: 10px;
+    position:relative;
+}
+
+/* ###### EXPERIMENTAL CURVES ########*/
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index:2;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(105% + 1.3px);
+    height: 121px;
+}
+
+.wave .shape-fill {
+    fill: rgba(18, 9, 6);
 }
 
 h3 {
@@ -349,31 +408,104 @@ img {
     font-size: 24px;
 }
 
+@-webkit-keyframes scale-up-ver-bottom {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+  }
+  @keyframes scale-up-ver-bottom {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+  }
+
 .hero-btn{
+    position:relative;
     width:20vw;
     margin-top: 1vh;
     padding: 10px 20px;
     text-align: center;
     background-color:#86705e;
-    border: 3px solid #4e3123;
     border-radius: 15px 4px;
+    border-left: 3px solid rgba(48, 29, 12, 1);
+    border-bottom: 3px solid rgba(48, 29, 12, 1);
+    border-right: 3px solid rgba(48, 29, 12, 1);
+    border-top: none;
     color:#1b0a02;
+    overflow:hidden;
     font-weight: 700;
     font-size: 20px;
     text-decoration: none;
-}
-
-.hero-btn:hover{
-    background-color:#4e3123;
-    border: 3px solid #4e3123de;
-    color:#fff;
     transition: .3s ease-in-out;
 }
 
-/* coffee icon */
+.hero-btn:hover{
+    color:#fff;
+    border-left: 4px solid rgba(48, 29, 12, 1);
+    border-bottom: 4px solid rgba(48, 29, 12, 1);
+    border-right: 4px solid rgba(48, 29, 12, 1);
+    border-top: none;
+    transform: translateY(-4px);
+    box-shadow: 6px 8px 15px 0px #1b0a02;
+}
 
+.hero-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#4e3123;
+    opacity:0; 
+    z-index: 1;
+    -webkit-animation: scale-up-ver-bottom 2s steps(8, start)  infinite;
+    animation: scale-up-ver-bottom 2s steps(8, start)  infinite;    
+}
+
+.hero-btn:hover::before{
+    opacity:.4;
+    color:#fff;
+    z-index: 1;
+}
+
+/* coffee icon */
+/* ##### EXPERIEMENTAL SVG BORDER */
+
+.spacer{
+    flex:none;
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position:absolute center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.layer1 {
+    background-image: url('media/ft_waves.svg');
+}
 
 /* ## FOOTER ## */
+
 
 .footer {
     display: grid;
@@ -383,7 +515,7 @@ img {
         ". ft-logo ft-links ft-contact" /* Add missing dot */
         ". ft-logo ft-links ft-contact" /* Add missing dot */
         ". ft-icons ft-links ft-contact"; /* Add missing dot */
-    background-image: linear-gradient(rgba(107, 80, 41, 0.7), 2%, rgba(18, 9, 6, 0.95)),
+    background-image: linear-gradient(rgb(29, 16, 9), 80%,rgba(29, 16, 9, .85)),
     url("media/coffee_banner.jpg");
     color:#fffb;
 }
@@ -640,7 +772,7 @@ nav .fa-solid {
         top: 0;
         right: -185px;
         text-align: left;
-        z-index: 2;
+        z-index: 3;
         transition: 1s cubic-bezier(.3, 1.01, 0.75, -0.8);
     }
 
