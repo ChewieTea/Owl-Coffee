@@ -5,19 +5,24 @@
     font-size: 24px;
 }
 
-.header {
-    min-height: 45vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(72, 62, 27, 0.2), 1%, rgba(18, 9, 6, 1)),  url(media/coffee_banner.jpg) ;/*url for the background image/colour for the header */
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
 body{
     background-image: linear-gradient(rgba(18, 9, 6, 1), 2%, rgba(217, 217, 217, 0.6)),
     url();
 }
+
+.header {
+    min-height: 45vh;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(
+        rgba(72, 62, 27, 0.2),
+        2%, rgba(18, 9, 6, 1)),
+        url(media/coffee_banner.jpg);/*url for the background image/colour for the header */
+    background-position: center;
+    background-size: cover;
+    border-bottom: #120906 10px solid;
+}
+
 nav {
     display: flex;
     padding: 2% 3% 2% 1%; /* it's weird because of the png being off centre, don't worry about it until you have to */
@@ -213,7 +218,7 @@ p {
 }
 
 .row {
-    margin-top: 5%;
+    margin-top: 15%;
     display: flex;
     justify-content: space-between;
     margin-left: 3%;
@@ -292,17 +297,18 @@ img {
 /* slider merch */
 
 .container{
-    padding:10px 32px 2rem;
     display:flex;
-    justify-content: flex-start;
+    justify-items: center;
+    align-items: center;
+    margin: 2vh 0;
 }
 
 .slider-wrap{
     position:relative;
     max-width: 48rem;
     margin: 0 auto;
-    margin-left: 0;
-    padding-left: 10rem;
+    border:#9b6b58 40px ridge;
+    border-radius:19% 27% 28% 29% / 9% 17% 8% 9%;
 }
 
 .slider{
@@ -313,7 +319,9 @@ img {
     overflow: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    box-shadow: 0 10px 15px 3px rgba(21, 30, 70, 0.9);
+    -webkit-box-shadow:0px 7px 15px 8px rgba(62,66,66,0.4);
+    -moz-box-shadow: 0px 7px 15px 8px rgba(62,66,66,0.4);
+    box-shadow: 0px 7px 15px 8px rgba(62,66,66,0.4);
 }
 
 .slider img{
@@ -328,8 +336,8 @@ img {
 .buttons{
     position: absolute;
     top: 50%;
-    left:51%;
-    width:48%;
+    left:2%;
+    width:96%;
     display: flex;
     justify-content: space-between;
 }
@@ -346,7 +354,6 @@ img {
     cursor: pointer;
     transition: opacity 250ms ease; /* Added transition property */
 }
-
 .buttons button:hover{
     opacity:0.8;
 }
@@ -355,55 +362,71 @@ img {
 .slider-nav{
     display: flex;
     column-gap: 1rem;
-    position: absolute;
-    bottom:1.25rem;
-    left:75%;
-    transform:translateX(-50%);
+    position:absolute;
+    top: 93%;
+    left: 18%;
     z-index: 1;
 }
 
 .slider-nav a{
-    width:15px;
-    height:10px;
+    width:20px;
+    height:14px;
     border-radius: 20%;
     background-color: #654b35;
     opacity: 0.65;
-    transition: opacity ease 250ms;
+    transition:
+        height ease 250ms, 
+        width ease 250ms,
+        opacity ease 250ms,
+        border-radius ease 250ms;
+
 }
 
 .slider-nav a:hover{
+    height: 18px;
+    width:18px;
     opacity:1;
+    border-radius:100%;
 }
 
 .merch-content {
+    max-height: 50em;
+    max-width:40vw;
     display:flex;
     flex-direction: column;
     flex-direction: flex-start;
-    max-height: 50em;
-    max-width:40vw;
-    padding: 10vh 5vw;
-    text-align: left;
     margin-left: 0;
+    border:30px;
+    padding: 5vh 5vw;
+    text-align: left;
+    z-index:2;
 }
+
+.merch-content#merch-background {
+    content: url('media/container-background.svg');
+    background-position: absolute;
+    background-repeat:no-repeat;
+    z-index: 1;
+    }
 
 .merch-content h2{
     padding: 4vh 0 1vh 0;
     font-size: 36px;
-    font-weight: 600;
-    color: #301d0c;
+    font-weight: 550;
+    color: #c7ae9c;
 }
 
 .merch-content .line{ /* line */
     width: 90%;
     height:5px;
     border:4vh 0;
-    background-color: #4e3123;
+    background-color: #29150d;
     border-radius: 30px 2px;
 }
 
 .merch-content p{
     display:inline-block;
-    color:#86705e;
+    color:#a99280;
     padding: 3vh 0;
     font-size: 24px;
 }
@@ -440,6 +463,7 @@ img {
 .hero-btn{
     position:relative;
     width:20vw;
+    height: 5vh;
     margin-top: 1vh;
     padding: 10px 20px;
     text-align: center;
@@ -475,10 +499,10 @@ img {
     width: 100%;
     height: 100%;
     background-color:#4e3123;
-    opacity:0; 
+    opacity:0;
     z-index: 1;
-    -webkit-animation: scale-up-ver-bottom 2s steps(8, start)  infinite;
-    animation: scale-up-ver-bottom 2s steps(8, start)  infinite;    
+    -webkit-animation: scale-up-ver-bottom 2s linear  infinite;
+    animation: scale-up-ver-bottom 2s linear  infinite;
 }
 
 .hero-btn:hover::before{
