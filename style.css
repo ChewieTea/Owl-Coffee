@@ -6,8 +6,7 @@
 }
 
 body{
-    background-image: linear-gradient(rgba(18, 9, 6, 1), 2%, rgba(217, 217, 217, 0.6)),
-    url();
+    background-color:#d9d9d9;
 }
 
 .header {
@@ -41,6 +40,14 @@ nav img:hover{
     transform: translateY(-2px);
 }
 
+.animate__animated.animate__wobble{
+    animation: wobble .8s;
+}
+
+.animate__animated.animate__wobble:hover{
+    animation:normal;
+}
+
 h1{
     font-size: 42px;
     color:#eae3dd;
@@ -58,7 +65,6 @@ nav .nav-title{
 }
 
 nav .nav-title:hover{
-    transform:translateY(-4px);
     text-shadow: rgba(82, 76, 69, 0.95) 2px 2px 15px;
 }
 
@@ -230,7 +236,7 @@ img {
     border-radius: 10px;
 }
 
-.prom-col {
+.promo-col {
     position: relative;
     display:flex;
     align-items: center;
@@ -245,12 +251,12 @@ img {
     overflow:hidden;
 }
 
-.prom-col:hover {
+.promo-col:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
     transform: translateY(-10px);
 }
 
-.prom-col::before {
+.promo-col::before {
     content: "";
     position: absolute;
     top: 0;
@@ -263,33 +269,33 @@ img {
     transition: 0.3s ease;
 }
 
-.prom-col:hover::before {
+.promo-col:hover::before {
     opacity:0.12;
 }
 
-.prom-col .content{
+.promo-col .content{
     flex-grow: 1;
     margin-right: 10px;
 }
 
-.prom-col img{
+.promo-col img{
     width: 100px;
     height: 100px;
     margin-left: 10px;
     background-size: cover;
 }
 
-.prom-col#prom-loyalty{
+.promo-col#promo-loyalty{
     border-radius: 50px 3px 50px 10px;
     background:#86705e;
 }
 
-.prom-col#prom-bday{
+.promo-col#promo-bday{
     border-radius: 3px 3px 45px 45px;
     background:#b7987e;
 }
 
-.prom-col#prom-ten{
+.promo-col#promo-ten{
     border-radius: 3px 50px 10px 50px;
     background:#86705e;
 }
@@ -319,9 +325,6 @@ img {
     overflow: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    -webkit-box-shadow:0px 7px 15px 8px rgba(62,66,66,0.4);
-    -moz-box-shadow: 0px 7px 15px 8px rgba(62,66,66,0.4);
-    box-shadow: 0px 7px 15px 8px rgba(62,66,66,0.4);
 }
 
 .slider img{
@@ -388,29 +391,32 @@ img {
     opacity:1;
     border-radius:100%;
 }
-
-.merch-content {
-    max-height: 50em;
-    max-width:40vw;
-    display:flex;
+.merch-content{
+    background-image: url(media/container-background.svg); /*! looks good until 1100px width*/
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30em;
+    width: 40vw;
+    display: flex;
     flex-direction: column;
-    flex-direction: flex-start;
     margin-left: 0;
-    border:30px;
-    padding: 5vh 5vw;
+    border: 30px;
+    padding: 5vh 6vw 5vh 7vw;
+    justify-content: center;
     text-align: left;
-    z-index:2;
+    z-index: 2;
+    align-items: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
-.merch-content#merch-background {
-    content: url('media/container-background.svg');
-    background-position: absolute;
-    background-repeat:no-repeat;
-    z-index: 1;
-    }
+.merch-content h2, .line, p, .hero-btn{
+    margin: 0 1rem 0 1vw;
+}
 
 .merch-content h2{
-    padding: 4vh 0 1vh 0;
+    padding: 0vh 0 1vh 0;
+    margin-top:4vh;
     font-size: 36px;
     font-weight: 550;
     color: #c7ae9c;
@@ -463,16 +469,18 @@ img {
 .hero-btn{
     position:relative;
     width:20vw;
-    height: 5vh;
+    height: 4vh;
     margin-top: 1vh;
     padding: 10px 20px;
     text-align: center;
     background-color:#86705e;
     border-radius: 15px 4px;
-    border-left: 3px solid rgba(48, 29, 12, 1);
-    border-bottom: 3px solid rgba(48, 29, 12, 1);
-    border-right: 3px solid rgba(48, 29, 12, 1);
-    border-top: none;
+    border:
+        none,
+        3px solid rgba(48, 29, 12, 1),
+        3px solid rgba(48, 29, 12, 1),
+        3px solid rgba(48, 29, 12, 1);
+    margin-bottom: 5vh;
     color:#1b0a02;
     overflow:hidden;
     font-weight: 700;
@@ -483,10 +491,11 @@ img {
 
 .hero-btn:hover{
     color:#fff;
-    border-left: 4px solid rgba(48, 29, 12, 1);
-    border-bottom: 4px solid rgba(48, 29, 12, 1);
-    border-right: 4px solid rgba(48, 29, 12, 1);
-    border-top: none;
+    border:
+        none,
+        4px solid rgba(48, 29, 12, 1),
+        4px solid rgba(48, 29, 12, 1),
+        4px solid rgba(48, 29, 12, 1);
     transform: translateY(-4px);
     box-shadow: 6px 8px 15px 0px #1b0a02;
 }
@@ -516,7 +525,7 @@ img {
 
 .spacer{
     flex:none;
-    aspect-ratio: 960/300;
+    aspect-ratio: 960/180;
     width: 100%;
     background-repeat: no-repeat;
     background-position:absolute center;
@@ -725,9 +734,9 @@ nav .fa-solid {
     display: none;
 }
 
-/*## media ############### */
-/*# phone #*/
-@media(max-width: 650px) {
+/*!## media ############### */
+/** phone ---------------------------------------------------------------------------------------------------------*/
+@media(max-width: 800px) {
     .header{
         min-height: 20vh;
     }
@@ -830,7 +839,7 @@ nav .fa-solid {
         font-size: 14px;
     }
 
-    /* -- prom cols -- */
+    /* -- promo cols -- */
 
     h3{
         font-size:22px;
@@ -838,13 +847,14 @@ nav .fa-solid {
         text-decoration: underline 3px dashed #d0a172;
     }
 
-    .prom-col p{
+    .promo-col p{
         display:none;
     }
 
     .row{
         flex-direction: column;
-        margin-top: 2%;
+        margin-top: 20%;
+        margin-bottom: 8%;
     }
 
     img {
@@ -853,21 +863,21 @@ nav .fa-solid {
         margin:0.4em;
     }
 
-    .prom-col{
-        margin-bottom: 2%;
+    .promo-col{
+        margin-bottom: 1%;
         padding: 1.4vh 4vw 1.8vh;
     }
 
-    .prom-col:hover{
+    .promo-col:hover{
         transform: translateY(-4px);
     }
 
-    .prom-col#prom-bday{
+    .promo-col#promo-bday{
         border-radius: 50px 3px 50px 10px;
         background:#77685c;
     }
 
-    .prom-col#prom-ten{
+    .promo-col#promo-ten{
         border-radius: 50px 3px 50px 10px;
         background:#86705e;
     }
@@ -886,9 +896,7 @@ nav .fa-solid {
         margin: 0; /* I added this, there is no margin anywhere else, it should not require the margin to be 0 */
         padding-left: 0;
     }
-    .slider{
-        margin-bottom: 1rem;
-    }
+
     /* image */
     .slider img{
         flex:none;
@@ -896,7 +904,7 @@ nav .fa-solid {
         min-height:587px;
         scroll-snap-align: start;
         object-fit:cover;
-        margin-left:0;
+        margin:0;
     }
 
     /* buttons */
@@ -925,11 +933,22 @@ nav .fa-solid {
     .merch-content {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Add this line */
-        justify-content: center; /* Add this line */
+        align-items: center;
+        justify-content: center;
+        width:auto;
         max-width: 95vw;
+        height:100%;
         padding: 1vh 3vw;
+        margin-bottom: 1rem;
+        box-sizing: border-box;
+        border-radius: 25px 50px 50px;
+        background:#4f3b32;
         text-align:center;
+    }
+
+
+    .merch-content h2, .line, p, .hero-btn{
+        margin: 0;
     }
 
     .merch-content h2{
@@ -961,7 +980,7 @@ nav .fa-solid {
         grid-template-columns: 1fr 2fr;
         background-color: #301d0c;
         color:#fffb;
-        padding:1.4em 0.5em 1em 0.5em;
+        padding:.8em 0.5em 1em 0.5em;
     }
 
     .footer h3{
@@ -1034,7 +1053,329 @@ nav .fa-solid {
 
 }
 
-/*# Tablet/Landscape #*/
-@media(min-width:650px) and (max-width:1000px){
+/** Tablet/Landscape ------------------------------------------------------------------------------------------------------------------------------*/
+@media(min-width:801px) and (max-width:1100px){
 /* # MAKE SURE PHONE IS FINISHED FULLY #*/
+    .header{
+        min-height: 20vh;
+    }
+
+    nav{
+        padding: 1% 1%;
+        margin-bottom:4vh;
+    }
+
+    .header nav img{
+        width:25vw;
+    }
+    nav .nav-title{
+        display:none;
+    }
+
+    .slogan{
+        padding:5px;
+        position: relative;
+        align-items: flex-end;
+    }
+
+    .slogan h1{
+        font-size:20px;
+        font-weight: 300;
+        padding-top:0;
+    }
+
+    .slogan h1#media-title{
+        display:inline-block;
+        position:absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -110%);
+        padding:.6rem;
+        font-size: 26px;
+        font-weight: 600;
+    }
+    
+    .slogan h1#slogan{
+        padding: 0;
+    }
+
+    .slogan h1#slogan::before {
+        content: "";
+        position:absolute;
+        transform:translateY(-.7rem) scaleX(0.2);
+        transition: transform 0.3s ease-out;
+    }
+    
+    .slogan h1#slogan:hover::before {
+        transform:translateY(-.6rem) scaleX(0.5);
+    }
+
+    /* menu bar */
+    .nav-links ul li {
+        display: block;
+    }
+
+    nav .nav-links { /* kinda wanna add a vertical mask here to make it look cooler */
+        position:fixed;
+        background: #3c3733;
+        height: 100vh;
+        width: 185px;
+        top: 0;
+        right: -185px;
+        text-align: left;
+        z-index: 3;
+        transition: 1s cubic-bezier(.3, 1.01, 0.75, -0.8);
+    }
+
+    .fa-solid#menu{
+        display: block;
+        margin:auto;
+        margin-right: 5vw;
+        text-align: right;
+        color: #d6c2b0;
+        font-size: 28;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .fa-solid#close{
+        display: block;
+        margin: 1.2rem;
+        color: #d6c2b0;
+        font-size: 28;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 10px;
+    }
+    .footer h4{
+        font-size: 20px;
+    }
+    .footer p{
+        font-size: 14px;
+    }
+
+    /* -- promo cols -- */
+
+    h3{
+        font-size:22px;
+        font-weight: 500;
+        text-decoration: underline 3px dashed #d0a172;
+    }
+
+    p{
+        font-size: 8px;
+        font-weight: 400;
+    }
+
+    .row{
+        flex-direction: column;
+        margin-top: 10%;
+        margin-bottom: 8%;
+    }
+
+    img {
+        width: 3em;
+        border-radius: 18px;
+        margin:0.4em;
+    }
+
+    .promo-col{
+        margin-bottom: 1%;
+        padding: 1.4vh 4vw 1.8vh;
+    }
+
+    .promo-col:hover{
+        transform: translateY(-4px);
+    }
+
+    .promo-col#promo-bday{
+        border-radius: 50px 3px 50px 10px;
+        background:#77685c;
+    }
+
+    .promo-col#promo-ten{
+        border-radius: 50px 3px 50px 10px;
+        background:#86705e;
+    }
+
+    /* -- merch -- */
+
+    .container{
+        display:flex;
+        margin: 2vh;
+    }
+
+    .slider-wrap{
+        position:flex;
+        margin: 0 1rem 0; /* I added this, there is no margin anywhere else, it should not require the margin to be 0 */
+        padding-left: 0;
+    }
+
+    /* image */
+    .slider img{
+        flex:none;
+        width:100%;
+        min-height:587px;
+        scroll-snap-align: start;
+        object-fit:cover;
+        margin:0;
+    }
+
+    /* buttons */
+    .buttons{
+        top: 50%;
+        left:2%;
+        width:96%;
+    }
+
+    .buttons button{
+        opacity:0.6;    
+    }
+
+    .slider-nav{
+        display: flex;
+        column-gap: 1.2rem;
+        position: absolute;
+        bottom:1.85rem;
+        left:50%;
+        transform:translateX(-50%);
+        z-index: 1;
+    }
+
+    /* merch content */
+
+    .merch-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width:auto;
+        max-width: 95vw;
+        height:100%;
+        padding: 1vh 3vw;
+        margin-bottom: 1rem;
+        box-sizing: border-box;
+        border-radius: 25px 50px 50px;
+        background:#4f3b32;
+        text-align:center;
+    }
+
+
+    .merch-content h2, .line, p, .hero-btn{
+        margin: 0;
+    }
+
+    .merch-content h2{
+        padding: 1vh;
+        font-size: 26px;
+    }
+
+    .line{ /* line */
+        max-width: 75%;
+    }
+
+    .merch-content p{
+        padding: .6vh 0 1.4vh;
+        font-size: 22px;
+        line-height: 1em;
+    }
+
+    .hero-btn{
+        width:28vw;
+        height:1.4rem;
+        margin: 1.2vh 1.2vw 2vh;
+        font-size: 16px;
+    }
+
+
+    /* ### Footer ### */
+
+    .footer {
+        display: grid;
+        grid: repeat(2, 2.4rem) / auto-flow 2.4rem; /* Update grid-template-columns */
+        grid-template-columns: 1fr 2fr;
+        background-color: #301d0c;
+        color:#fffb;
+        padding:1.4em 0.5em 1em 0.5em;
+        height: 10vh;
+    }
+
+    .footer h3{
+        padding:0;
+        font-size: 24px;
+
+    }
+
+    .ft-icons{
+        padding: 0 0.6rem;
+    }
+
+    .ft-icons{
+        padding: 0rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .ft-icons i{ /*footer icons*/
+        font-size: 1.2rem;
+        padding: 1px 0;
+        cursor:pointer;
+    }
+    
+
+    .ft-icons img{
+        display:none;
+    }
+
+    .ft-links .ft-line{
+        display:none;
+    }
+
+    .ft-links{
+        padding:0.2em,0,1em,0.1em;
+        height: 3.6rem;
+        text-align: center;
+        align-self: center;
+        justify-self: center;   
+    }
+
+    .ft-links a{
+        margin:0;
+        padding: 0 1em;
+        font-size: 18px;
+    }
+
+    .ft-links ul li {
+        list-style: none;
+        text-align: center;
+        justify-content:center;
+       
+    }
+
+    .ft-contact .ft-line{
+    padding:0;
+    width: 3px;
+    height: 6rem;
+    align-items: center;
+    background-color:#86705e;
+    border-radius: 1px;
+    }
+
+    .ft-contact{
+        grid-row-start: span 2;
+        padding:0;
+    }    
+
+    .content { /* content for the contact section */
+        padding: 0 1em;
+    }
+
+    .content * {
+        margin: 0;
+    }
 }

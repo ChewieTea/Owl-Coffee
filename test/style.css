@@ -1,0 +1,25 @@
+body{
+    font-size: 26px;
+    margin: 2rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #fffb;
+}
+
+h1{
+    font-weight: 700;
+    color:burlywood;
+    text-decoration: underline 4px solid;
+}
+
+.hover{
+    width: 40vw;
+    height: 50vh;
+    background-image: url(logo.png);
+    background-size: cover;
+}
+
+.hover:hover{
+    background-image: url(GIF_5.gif);
+}
