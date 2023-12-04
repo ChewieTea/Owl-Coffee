@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
 
+    <script src="https://unpkg.com/htmx.org@1.9.9"></script>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+<section class="header">
     <h1>OWL COFFEE :D</h1>
-    <div class="hover"></div>
 
-
+</section>
+    
+<section class="load">
+    <div hx-get="/graph" hx-trigger="load">
+        <div class="loader htmx-indicator"></div>
+      </div>
+</section>
 </body>
 </html>
