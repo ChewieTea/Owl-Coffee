@@ -15,14 +15,104 @@ h1{
     text-decoration: underline 4px solid;
 }
 
-.loader {
+.load {
     position:absolute;
     display:inline-block;
     max-width: 40%;
     color: #000;
 }
 
-.loader .htmx-indicator {
+.load .htmx-indicator {
     opacity: 0;
     transition: opacity 300ms ease-in;
 }
+
+/** COFFEE ------------------------------------------------------------------------*/
+
+
+:root {
+    --borderWidth: 10px;
+    --borderRadius: 10px;
+    --width: 400px;
+    --height: 225px;
+    --hue: 300;
+    --hueOffset: 120;
+    --level: 50%;
+    --brightness: 75%;
+    --gradient: radial-gradient( circle, hsl(var(--hue), 100%, var(--brightness)) 0%, hsl(calc(var(--hue) + var(--hueOffset)), 100%, var(--level)) 100% );
+    --duration: 5s;
+    --fraction: calc(var(--width) / (var(--width) + var(--height)));
+}
+
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+div {
+    display: block;
+}
+
+.gradient-border {
+    background: transparent;
+    position: relative;
+}
+
+#box {
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--borderRadius);
+    -webkit-mask: -webkit-gradient( linear, left top, left bottom, from(#fff), to(#fff) ) top, -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)) bottom, -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)) left, -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)) right;
+    -webkit-mask: linear-gradient(#fff, #fff) top, linear-gradient(#fff, #fff) bottom, linear-gradient(#fff, #fff) left, linear-gradient(#fff, #fff) right;
+    mask: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)) top, -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)) bottom, -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)) left, -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)) right;
+    mask: linear-gradient(#fff, #fff) top, linear-gradient(#fff, #fff) bottom, linear-gradient(#fff, #fff) left, linear-gradient(#fff, #fff) right;
+    -webkit-mask-size: 100% var(--borderWidth), 100% var(--borderWidth), var(--borderWidth) 100%, var(--borderWidth) 100%;
+    mask-size: 100% var(--borderWidth), 100% var(--borderWidth), var(--borderWidth) 100%, var(--borderWidth) 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    display: none;
+}
+
+.gradient-border:after {
+    content: "";
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: var(--gradient);
+    border-radius: calc(2 * var(--borderRadius));
+    -webkit-animation: animatedgradient var(--duration) ease-in-out infinite;
+    animation: animatedgradient var(--duration) ease-in-out infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 0%;
+        background-position-x: 0%;
+        background-position-y: 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+        background-position-x: 100%;
+        background-position-y: 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+        background-position-x: 100%;
+        background-position-y: 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+        background-position-x: 0%;
+        background-position-y: 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+        background-position-x: 0%;
+        background-position-y: 0%;
+    }
+}
+

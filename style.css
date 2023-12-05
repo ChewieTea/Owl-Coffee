@@ -1933,3 +1933,109 @@ h4 {
     }
 
 }
+
+/** COFFEE --------------------------------------------*/
+
+.about-us#coffee {
+    padding-bottom: 1.05rem;
+}
+
+.grid-container {
+    display:grid;
+    grid: auto-flow / repeat(3, 1fr);
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: .8rem;
+    margin: .4rem;
+    text-align: center;
+    background: linear-gradient(180deg, #935f34 0%, #240a0a 80%);
+    border: 7px inset #a07565;
+    border-radius: 30px;
+    box-shadow: 1px 2px 10px 1px #1b0a02;
+    cursor: pointer;
+    z-index: 0;
+    transition:
+        transform .23s ease-out,
+        box-shadow .23s ease-out,
+        filter .23s ease-out;
+}
+
+.grid:hover {
+    transform: translate(-2px, -10px);
+    box-shadow: 6px 8px 15px 0px #1b0a02;
+    filter: hue-rotate(5deg);
+}
+
+.grid .fa-circle-info {
+    flex:none;
+    position:absolute;
+    top:23px;
+    right:23px;
+    color:#120906;
+    font-size: 32px;
+}
+
+.grid a[data-tool-tip] {
+    position:relative;
+}
+
+.grid a[data-tool-tip]::after {
+    content: attr(data-tool-tip);
+    display:block;
+    position:absolute;
+    max-width: 88%;
+    background-color: #cfae93;
+    padding:.8em;
+    color:#120906;
+    border-radius: 5px;
+    font-size: .75em;
+    font-weight:550;
+    top: 0;
+    right:3%;
+    z-index: 2;
+    opacity: .9;
+    transform-origin: 95% 40%;
+    transform: scale(0);
+    transition: cubic-bezier(.43,.27,.48,1) .4s;
+}
+
+.grid a[data-tool-tip]:hover::after {
+    transform:scale(1);
+}
+
+.grid img {
+    width: 300px;
+}
+
+.grid h4 {
+    padding-bottom:.45em;
+    color: #d2d2d2;
+}
+
+.grid p {
+    position:relative;
+    color: #c3b1aa;
+    line-height: 21px;
+    text-align: center;
+}
+
+.grid p::before{
+    content:'';
+    position:absolute;
+    width: 100%;
+    height:3.2px;
+    top:-10%;
+    left:0%;
+    border-radius: 5px;
+    background-color: #583924;
+    transform: scaleX(80%);
+    transition: linear .24s;
+}
+
+.grid p:hover::before{
+    transform: scaleX(95%)
+}
