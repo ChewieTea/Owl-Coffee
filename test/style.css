@@ -44,7 +44,6 @@ h1{
     --fraction: calc(var(--width) / (var(--width) + var(--height)));
 }
 
-
 *, *:before, *:after {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
