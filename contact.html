@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owl Coffee</title>
+    <link rel="stylesheet" href="style.css">
+<link href="link rel="preconnect href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">     <!-- Google icon website/host-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="icon" type="image/icon" href="media/logo_crop.png">
+</head>
+<body class="background">
+
+<!--* Sub-Header -->
+<section class="header"> <!-- Class for top of the website for titles and nav links-->
+    <nav>
+        <a href="index.html"><img src="media/logo.png" class="animate__animated animate__wobble" alt="Owl Coffee's logo. An owl in a coffee cup with yellow text bellow saying OWL COFFEE'S"></a> <!-- Adds bagel as clickable icon to the webpage-->
+        <a href="index.html" class="nav-title"><h1>Owl Coffee</h1></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-xmark" id="close" onclick="hideMenu()"></i>     <!-- Adds Menu icon for phone version (made phone version using @media in style.css)-->
+            <ul>        <!-- List of options which will be our menu/navigation for the website-->
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="merch.html">MERCH</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="coffee.html">COFFEE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-bars" id="menu" onclick="showMenu()"></i>
+    </nav>
+    <div class="slogan">
+        <h1 id="media-title">Owl Coffee</h1>
+        <h2 id="slogan">CONTACT</h2>
+    </div>
+
+</section>    
+
+<!-- TOP WAVES -->
+<section>
+    <div class="spacer layer1"></div><!--* SVG -->
+
+</section>
+
+<!--? Contact Section -->
+
+<section class="about-us" id="coffee">
+    <h4>Lorem ipsum, dolor sit amet.</h4>
+
+</section>
+
+<section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1184.0065893729575!2d-2.2979708680747715!3d53.593226483366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ba4dd0642fbdf%3A0xc337a821ed36ac93!2sBloom%20Coffee%20Co.!5e0!3m2!1sen!2suk!4v1701878148049!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</section>
+
+<section class="contact-us">
+    <div class="row">
+        <div class="contact-col info">
+
+            <div>
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>
+                    <h5>NN</h5>
+                    <p> {address} </p>
+                </span>
+            </div>
+            <div>
+                <i class="fa-solid fa-phone"></i>
+                <span>
+                    <h5>+44 XXXX XXXXXX</h5>
+                    <p> {hours} </p>
+                </span>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <span>
+                    <h5>email@host.com</h5>
+                    <p> {text} </p>
+                </span>
+            </div>
+            </div>
+            <!--? php formhandler section -->
+            <div class="contact-col form">
+                <form action="formhandler.php" method="post">
+
+                    <h3>Send a message!</h3>
+                    <div class="input">
+                        <input type="text" name="name" id="name" required>
+                        <label class="label" for="name">Name</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="text" name="email" id="email" required> <!--! "text" needs to  be "email" specific but the animation stops working on the first character otherwise. -->
+                        <label class="label" for="email">Email</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="text" name="subject" id="subject" required>
+                        <label class="label" for="subject">Subject</label>
+                    </div>
+
+                    <div class="text-box">
+                        <textarea name="message" rows="8" id="message" required></textarea>
+                        <label class="label" for="message">Message...</label>
+                    </div>
+
+                    <button type="submit" class="about-btn send">Send</button>
+
+
+                </form>
+
+
+            </div>
+
+
+
+
+
+
+
+        
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--* Sub-Footer -->
+<section>
+    <div class="spacer layer2"></div><!--* SVG -->
+
+</section>
+<section class="footer">
+
+    <div class="ft-icons">
+        <a href="index.html"><img src="media/logo.png" alt="Owl Coffee's logo. An owl in a coffee cup with yellow text bellow saying OWL COFFEE'S"></a>
+        <div class="icon-wrap">
+            <a href="" alt="Facebook Link for Owl's Coffee"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="" alt="Instagram Link for Owl's Coffee"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="" alt="Twitter Link for Owl's Coffee"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="" alt="LinkedIn Link for Owl's Coffee"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </div>
+    <div class="ft-links">
+        <div class="ft-line"></div>
+            <div class="ft-container">
+                <ul> <!-- will need valid links here -->
+                    <li><a href="merch.html">MERCH</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="">FAQs</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="ft-contact">
+        <div class="ft-line"></div>
+        <div class="content">
+            <a href="contact.html"><h3>Contact Us</h3></a> <!-- ## This will all need to be replaced ##-->
+            <div class="line"></div>
+            <a href="#"><p id="address">308 Negra Arroyo Lane, Albuquerque<br>New Mexico 87104</p></a> <!-- link to google maps or contact page-->
+            <a href="#"><p id="number">Phone:  +44 79699 496</p></a> <!-- link to phone or contact page-->
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- ## JS ## -->
+<script src="aijs.js"></script>
+<!-------- Javascript for Toggle Menu -------->
+<script>
+    var navLinks = document.getElementById("navLinks")
+   function showMenu(){
+       navLinks.style.right = "0";
+   }
+   function hideMenu(){
+       navLinks.style.right = "-200px";
+   }
+</script>
+</body>
+
+</html>

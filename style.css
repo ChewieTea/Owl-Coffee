@@ -2045,3 +2045,150 @@ h4 {
     }
 
 }
+
+/** CONTACT US -----------------------------------------------------*/
+.location {
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.location iframe {
+    width: 100%;
+    border-radius: 5px;
+    filter:
+        grayscale(20%)
+        drop-shadow(0px 10px 6px rgb(16, 1, 1, 0.4));
+    transition:
+        filter linear .3s,
+        transform linear .3s;
+}
+
+.location iframe:hover{
+    filter: drop-shadow(0px 18px 10px rgb(16, 1, 1, 0.9));
+    transform:
+        translateY(-3px);
+}
+
+.info {
+    padding:.4rem;
+    justify-items: flex-end;
+    text-align: right;
+}
+
+.contact-col i {
+    color: #120906;
+    font-size: 36px;
+    padding: 6px;
+}
+
+.contact-col h5 {
+    color:#3c2d21;
+    padding: 4px;
+}
+
+.contact-col p {
+    color: #654b35;
+    padding: 2px;
+}
+
+
+
+
+
+/**form */
+
+.form {
+    width:40vw;
+    background: radial-gradient(circle at right bottom, #3b1c0f , 10%, #120906);
+    border-radius:6px;
+}
+
+.form h3 {
+    padding-top: 1rem;
+    padding-bottom: .6rem;
+    color:#d6c2b0;
+    font-weight: 300;
+    text-decoration: #654b35 underline dashed;
+    text-underline-offset: 12px;
+    text-decoration-thickness: 4px;
+}
+
+form {
+    position: relative;
+    padding-inline: 1.3rem .1rem;
+}
+
+.input {
+    margin: 1.5rem 0;
+}
+
+.text-box {
+    margin: 1.5rem 0 .5rem;
+}
+
+input, textarea {
+    all:unset;
+    position: relative;
+    width: 91.5%;
+    color:#3b1c0f;
+    background-color: #f2e5dbc2;
+    padding: .26rem;
+    border: 2px solid #b7987e;
+    border-radius: 4px;
+    transition:
+        150ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 300ms ease;
+}
+
+.label {
+    position: absolute;
+    left: 1.8rem;
+    transform: translateY(60%);
+    color: #2e1406;
+    font-size: 20px;
+    pointer-events: none;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input:focus, textarea:focus {
+    border: 2px solid #240a0a;
+}
+
+input:is(focus, :valid) ~ .label {
+    transform:
+        translateY(-108%)
+        translateX(-15%)
+        scale(.8);
+    background-color: #86705e;
+    padding-inline: 1rem;
+    padding-top: .16rem;
+    padding-bottom: .1rem;
+    border-radius: 5px;
+    color: #120906;
+}
+
+textarea:is(focus, :valid) ~ .label {
+    transform:
+        translateY(-108%)
+        translateX(-15%)
+        scale(.8);
+    background-color: #86705e;
+    padding-inline: 1rem;
+    padding-top: .16rem;
+    padding-bottom: .1rem;
+    border-radius: 5px;
+    color: #120906;
+}
+
+input:is(focus, :valid) {
+    background-color:#f2e5db;
+}
+
+textarea:is(focus, :valid) {
+    background-color:#f2e5db;
+}
+
+.send {
+    cursor: pointer;
+}
