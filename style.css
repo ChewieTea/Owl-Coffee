@@ -25,7 +25,7 @@ body{
     animation: slide-in-blurred-top 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) alternate both;
 }*/
 
-.sub.slide-in-blurred-top {
+.slide-in-blurred-top {
 	-webkit-animation: slide-in-blurred-top 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) alternate both;
     animation: slide-in-blurred-top 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) alternate both;
 }
