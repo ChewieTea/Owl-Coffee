@@ -1,8 +1,6 @@
 const slider = document.querySelector('.slider');
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
-const email = document.querySelector('#email');
-const php = document('formhandler.php');
 
 let currentSlide = 0;// assigns currentSlide with 0
 const slideWidth = slider.clientWidth; // assigns the width, used for translation distance for each slide.
@@ -43,11 +41,3 @@ prevButton.addEventListener('click', () => {
       });
     });
   });
-
-
-
-  if ((email).nodeType === email) {
-    php = true;
-  } else if ((email).nodeType !== email) {
-    php = false;
-  };
