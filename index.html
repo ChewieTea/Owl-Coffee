@@ -15,16 +15,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <link rel="icon" type="image/icon" href="media/logo_crop.png">
 </head>
-<body>
+<body class="background">
 
 <section class="header"> <!-- Class for top of the website for titles and nav links-->
-    <nav>
-        <a href="index.html"><img src="media/logo.png" alt="Owl Coffee's logo. An owl in a coffee cup with yellow text bellow saying OWL COFFEE'S"></a> <!-- Adds bagel as clickable icon to the webpage-->
-        <a href="index.html" class="nav-title"><h1>Owl Coffee</h1></a>
+    <nav class="slide-in-blurred-top">
+        <a href="#"><img src="media/logo.png" alt="Owl Coffee's logo. An owl in a coffee cup with yellow text bellow saying OWL COFFEE'S"></a> <!-- Adds bagel as clickable icon to the webpage-->
+        <a href="#" class="nav-title"><h1>Owl Coffee</h1></a>
         <div class="nav-links" id="navLinks">
             <i class="fa-solid fa-xmark" id="close" onclick="hideMenu()"></i>     <!-- Adds Menu icon for phone version (made phone version using @media in style.css)-->
             <ul>        <!-- List of options which will be our menu/navigation for the website-->
-                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">HOME</a></li>
                 <li><a href="merch.html">MERCH</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="coffee.html">COFFEE</a></li>
@@ -40,14 +40,15 @@
 
 </section>    
 
-<!-- promotional section -->
-<section class="promotions">
-
 <!-- TOP WAVES -->
 <section>
     <div class="spacer layer1"></div><!--* SVG -->
 
 </section>
+
+<!-- promotional section -->
+<section class="promotions hidden">
+
     <div class="row">
         <a href="" class="promo-col" id="promo-loyalty">
                 <div class="content">
@@ -70,7 +71,7 @@
             </div>
             <img src="media/ten_coffee.jpeg" alt="Image of multiple coffee cups with numbers.">
         </a>
-</div>
+    </div>
 
 
 </section>
@@ -78,7 +79,7 @@
 
 <!-- Slider Section Merch -->
 
-<section class="container">
+<section class="container hidden">
     
     <div class="slider-wrap">
 
@@ -118,17 +119,18 @@
 
     
 </section>
+
 <section class="waves">
-    
     <!-- SVG -->
     <div class="spacer layer2"></div>
 
 
 </section>
+
 <section class="footer">
 
     <div class="ft-icons">
-        <a href="index.html"><img src="media/logo.png" alt="Owl Coffee's logo. An owl in a coffee cup with yellow text bellow saying OWL COFFEE'S"></a>
+        <a href="#"><img src="media/logo.png" alt="Owl Coffee's logo. An owl in a coffee cup with yellow text bellow saying OWL COFFEE'S"></a>
         <div class="icon-wrap">
             <a href="" alt="Facebook Link for Owl's Coffee"><i class="fa-brands fa-square-facebook"></i></a>
             <a href="" alt="Instagram Link for Owl's Coffee"><i class="fa-brands fa-square-instagram"></i></a>
@@ -140,16 +142,16 @@
         <div class="ft-line"></div>
             <div class="ft-container">
                 <ul> <!-- will need valid links here -->
-                    <li><a href="">MERCH</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">FAQs</a></li>
+                    <li><a href="merch.html">MERCH</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">FAQs</a></li>
                 </ul>
             </div>
     </div>
     <div class="ft-contact">
         <div class="ft-line"></div>
         <div class="content">
-            <a href="#"><h3>Contact Us</h3></a> <!-- ## This will all need to be replaced ##-->
+            <a href="contact.html"><h3>Contact Us</h3></a> <!-- ## This will all need to be replaced ##-->
             <div class="line"></div>
             <a href="#"><p id="address">308 Negra Arroyo Lane, Albuquerque<br>New Mexico 87104</p></a> <!-- link to google maps or contact page-->
             <a href="#"><p id="number">Phone:  +44 79699 496</p></a> <!-- link to phone or contact page-->
@@ -157,7 +159,6 @@
     </div>
 
 </section>
-
 
 
 <!-- ## JS ## -->

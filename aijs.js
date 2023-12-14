@@ -1,3 +1,19 @@
+// Scroll Timeline Observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+// Merch Buttons
 const slider = document.querySelector('.slider');
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
@@ -41,3 +57,5 @@ prevButton.addEventListener('click', () => {
       });
     });
   });
+
+
