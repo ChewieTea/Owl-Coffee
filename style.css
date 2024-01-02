@@ -877,6 +877,10 @@ nav .fa-solid {
         display: block;
     }
 
+    nav, .navlinks { /*! not sure why the overflow
+        overflow: hidden;  /*! doesn't fully work here */ 
+    }
+
     nav .nav-links { /* kinda wanna add a vertical mask here to make it look cooler */
         position:fixed;
         background: #3c3733;
