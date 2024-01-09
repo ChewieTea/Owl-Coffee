@@ -22,11 +22,11 @@
   
   *These are all wrapped into a `flexbox`, however when the `media query` is active, the `title` stops being `visible` and a `"dummy title"`, outside of the box, appears and dynamically appears above the `slogan`. This allowed me to keep a sleek design without going through the hastle of breaking it out of `flex` and meddling with `position: absolute;  top: x; left: x;`.*
 
-  ![Image of the title, logo and nav bar; Desktop version.](/media/readme_media/header)
+  ![Image of the title, logo and nav bar; Desktop version.](/media/readme_media/header.png)
   
-  [Tablet View](/media/readme_media/header_mobile)
+  [Tablet View](/media/readme_media/header_mobile.png)
   
-  [Mobile View](/media/readme_media/header_tablet)
+  [Mobile View](/media/readme_media/header_tablet.png)
 
   
   *The `Nav Bar` is sleekly designed to be interactive with some simple transitions and change into `Nav Menu` upon `Media` activation (of course based on the screen size).*
