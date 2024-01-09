@@ -24,7 +24,8 @@
 
   ![Image of the title, logo and nav bar; Desktop version.](/media/readme_media/header.png)
   
-  - [Tablet View](/media/readme_media/header_mobile.png)  - [Mobile View](/media/readme_media/header_tablet.png)
+  - [Tablet View](/media/readme_media/header_mobile.png)
+  - [Mobile View](/media/readme_media/header_tablet.png)
 
   
   *The `Nav Bar` is sleekly designed to be interactive with some simple transitions and change into `Nav Menu` upon `Media` activation (of course based on the screen size).*
