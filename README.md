@@ -20,7 +20,7 @@
 #### Header
   *The `header` consists simply of a `logo`, `title` and `nav bar` (which, in it's `media query`, will turn into a `nav menu`)*
   
-  *These are all wrapped into a `flexbox`, however when the `media query` is active, the `title` stops being `visible` and a `"dummy title"`, outside of the box, appears and dynamically appears above the `slogan`. This allowed me to keep a sleek design without going through the hastle of breaking it out of `flex` and meddling with `position: absolute;  top: x; left: x;`.*
+  *These are all wrapped into a `flexbox`, however when the `media query` is active, the `title` stops being `visible` and a `"dummy title"`, outside of the box, appears and dynamically appears above the `slogan`. This allowed me to keep a sleek design without going through the hastle of breaking it out of `flex` and meddling with `position: absolute;  top: x; left: x;`. slogan Slogan* slogan Slogan
 
   ![Image of the title, logo and nav bar; Desktop version.](/media/readme_media/header.png)
   
