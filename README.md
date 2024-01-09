@@ -28,6 +28,11 @@
   - [Mobile View](/media/readme_media/header_tablet.png)
 
   
-  *The `Nav Bar` is sleekly designed to be interactive with some simple transitions and change into `Nav Menu` upon `Media` activation (of course based on the screen size).*
+  *The `Nav Bar` is sleekly designed to be interactive with some simple transitions and change into `Nav Menu` upon `Media` activation (of course based on the screen size). I used a nice `cubic bezier` transition*
   
   *The `Nav Menu` was quite tricky to get right. From the `position`, `overflow` to even the `z-index` and `transition`. Even to the end it was by far the **most annoying problem** I dealt with throughout the problem.*
+
+#### Slogan
+ *The `Slogan` is very simple. It's simply positioned into the sub-center part of the `header`. However I've managed to jazz it up with a small line which changes position when hovered. No, it serves no real purpose, but it makes things a little more fun and hints to the possibility of there being some more easter eggs across the website if you hovered over them. **It's a fun addition**!*
+
+ *Lastly in this section is an `SVG` which nicely spills over into the body content. This creates a great `'coffee' effect` and completes the look for the `hero`.*
