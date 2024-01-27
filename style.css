@@ -603,6 +603,14 @@ img {
 
 /* coffee icon */
 /* ##### EXPERIEMENTAL SVG BORDER */
+.waves .spacer {
+    flex:none;
+    aspect-ratio: 960/160;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position:absolute center;
+    background-size: cover;
+}
 
 .layer2 {
     background-image: url('media/ft_waves.svg');
@@ -1615,7 +1623,7 @@ h4 {
 }
 
 .about-col h1 {
-    color:#b5a79c;
+    color:rgb(220, 206, 206);
     position:relative;
 }
 
@@ -1631,7 +1639,7 @@ h4 {
 }
 
 .about-col p {
-    color:#a79788;
+    color:#bfb4aa;
     padding: 22px 0 3vh;
     margin:0;
     font-size: 20px;
@@ -1792,12 +1800,13 @@ h4 {
 }
 
 .testimonials .row {
-    margin-top: 3%;
+    margin-top: 1%;
 }
 
 .testimonials h1{
     position:relative;
     color:rgba(46, 20, 6);
+    margin: .4em;
 }
 
 .testimonials h1::after{ /* line */
