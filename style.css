@@ -1133,7 +1133,7 @@ nav .fa-solid {
     }    
 
     .content { /* content for the contact section */
-        padding: 0 1em;
+        padding: 0 2% 0;
     }
 
     .content * {
