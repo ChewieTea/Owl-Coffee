@@ -7,27 +7,23 @@ nav {
     z-index: 4;
 }
 
-nav a h3 {
-    display: block;
+nav a {
     margin-left: 1rem;
     margin-top: 8px;
 }
 
-nav a:hover {
-    display: none;
+nav a h3 {
+    display: block;
 }
 
- nav a h3 { /*nav menu attributes */
-    padding: 0 4%;
-    text-decoration: none;
-    transition: 0.2s ease-out;
-}
 nav a h3:hover {
-    transform: translateY(-2px);
-    background-color: #00000042;
-    border-radius: 10px;
-} 
+    background-color: transparent;
+    transform: none;
+}
 
+nav a h3::after {
+    color: #caa07d; /* changes colour of the underline to look better for the lighter colour than the background */
+}
 
 .nav-menu.row {
     flex-direction: column;
@@ -38,11 +34,13 @@ nav a h3:hover {
 
 .nav-menu {
     position: fixed;
-    background-color: thistle;
+    background: #2B2824;
+    background: linear-gradient(180deg, #2B2824 50%, #515151 100%);
     height: 100vh;
     width: 160px;
     top: 0;
-    right: -160px; /*! Add transition here */
+    right: 0px; /*! Add transition here */
+    transition: 1s cubic-bezier(0,.2,.91,.88);
 }
 
 /** Icons for Menu */
