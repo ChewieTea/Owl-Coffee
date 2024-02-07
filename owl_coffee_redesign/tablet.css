@@ -1,5 +1,66 @@
+h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+}
+
+h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+}
+
+h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 300;
+    color: #fff;
+}
+
+h4 {
+    margin: 0;
+    font-size: 30px;
+    color: #000;
+}
+
 body {
     background-color: blue;
 }
 
 /*? Maybe on this version for PROMO i change the flex basis along with the text sizes */
+
+.promo-wrap {
+    display: flex; /* Added */
+    flex-direction: row; /* Added */
+    align-items: center; /* Added */
+    justify-content: space-between;
+
+    padding-inline: .2rem;
+}
+
+.promo-box {
+    flex-basis: 30%;
+    padding: 1rem .6rem .6rem;
+}
+
+.promo-box.row {
+    justify-content: space-between;
+}
+
+.promo-box img {
+    --screen-width: 100vw;
+    width: calc((var(--screen-width) / 100) * 7);
+
+}
+
+.promo-box.row img {
+    margin-left: 0;
+}
+
+.promo-box.row h3 {
+    font-size: 18px;
+    letter-spacing: -0.8px;
+    line-height: 1em;
+}

@@ -69,7 +69,7 @@ nav a h3::after {
     width: 160px;
     top: 0;
     right: -160px; /*! Add transition here */
-    transition: 1s cubic-bezier(0,.2,.91,.88);
+    transition: .5s cubic-bezier(0,.2,.91,.88);
 }
 
 /** Icons for Menu */
@@ -91,10 +91,40 @@ nav a h3::after {
 /** Rest of Hero (unrelated to nav) */
 
 header img {
-    width: 90%;
+    --screen-width: 100vw;
+    width: calc((var(--screen-width) / 100) * 60);
     margin: 2rem 0rem .8rem;
 }
 
 header h1 {
     text-align: right;
+}
+
+span#line { /*Intersecting line to seperate title from slogan */
+    margin: 0 15px;
+}
+
+/** promo section time */
+
+.promo-wrap {
+    display: flex; /* Added */
+    flex-direction: column; /* Added */
+    align-items: center; /* Added */
+    justify-content: space-between;
+
+    padding-inline: 1.4rem;
+}
+
+.promo-box {
+    background: url(media/polygon.png);
+    background-repeat: no-repeat;
+    padding: 1rem 2rem .6rem;
+    margin: .2rem 0;
+    cursor: pointer;
+    transition: all .14s ease-out;
+}
+
+.promo-box.row {
+    min-width: 60vw;
+    justify-content: space-between;
 }
