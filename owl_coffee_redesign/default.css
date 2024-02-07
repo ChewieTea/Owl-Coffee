@@ -131,8 +131,13 @@ div#wave { /* avoids pixels showing white between wave and header, leading to a 
 
 /*TODO ~~~ PROMOTIONS */
 
-.row.promo-wrap {
-    justify-content: space-around;
+.promo-wrap {
+    display: flex; /* Added */
+    flex-direction: row; /* Added */
+    align-items: center; /* Added */
+    justify-content: space-between;
+
+    padding-inline: 1.4rem;
 }
 
 .promo-wrap img {
@@ -140,8 +145,12 @@ div#wave { /* avoids pixels showing white between wave and header, leading to a 
 }
 
 .promo-box {
-    background: url(media/polygon.png), center;
-    padding: 1rem 2rem .6rem;
+    background: url(media/polygon.png);
+    background-repeat: no-repeat;
+
+    flex-basis: 33%;
+
+    padding: 1rem 0 .6rem;
     cursor: pointer;
     transition: all .14s ease-out;
 }
@@ -151,9 +160,9 @@ div#wave { /* avoids pixels showing white between wave and header, leading to a 
     transform: translateY(-8px) scale(102%);
 }
 
-.promo-box.row {
+/* .promo-box.row {
     justify-content: space-between;
-}
+} */
 
 .promo-box.row i {
     margin-top: 6px;
