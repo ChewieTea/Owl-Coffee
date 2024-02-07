@@ -1,7 +1,36 @@
+h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+    color: #fff;
+}
+
+h2 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 400;
+    color: #fff;
+}
+
+h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+}
+
+h4 {
+    margin: 0;
+    font-size: 28px;
+    color: #000;
+}
+
 body {
     background-color: yellow;
     z-index: 2;
 }
+
+/*TODO Nav Work for Phone */
 
 nav {
     z-index: 4;
@@ -39,7 +68,7 @@ nav a h3::after {
     height: 100vh;
     width: 160px;
     top: 0;
-    right: 0px; /*! Add transition here */
+    right: -160px; /*! Add transition here */
     transition: 1s cubic-bezier(0,.2,.91,.88);
 }
 
@@ -57,4 +86,15 @@ nav a h3::after {
 .icons#menu {
     font-size: 28px;
     margin-left: auto;
+}
+
+/** Rest of Hero (unrelated to nav) */
+
+header img {
+    width: 90%;
+    margin: 2rem 0rem .8rem;
+}
+
+header h1 {
+    text-align: right;
 }

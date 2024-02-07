@@ -115,7 +115,7 @@ h2 i { /* what makes COFFEE look different */
 }
 /*? I want this to appear on delay and only if the header is still on screen after 5 seconds or so */
 h2#arrowDown { /* The Arrow */
-    margin-left: 1.1rem;
+    margin-left: 1.28rem;
     font-size: 48px;
     font-weight: 500;
 }
@@ -127,4 +127,44 @@ div#wave { /* avoids pixels showing white between wave and header, leading to a 
 /** Hides the icons until mobile */
 .fa-solid.icons {
     display: none;
+}
+
+/*TODO ~~~ PROMOTIONS */
+
+.row.promo-wrap {
+    justify-content: space-around;
+}
+
+.promo-wrap img {
+    max-width: 80px;
+}
+
+.promo-box {
+    background: url(media/polygon.png), center;
+    padding: 1rem 2rem .6rem;
+    cursor: pointer;
+    transition: all .14s ease-out;
+}
+
+.promo-box:hover {
+    filter: drop-shadow(16px 16px 20px rgb(97, 51, 31)) invert(10%);
+    transform: translateY(-8px) scale(102%);
+}
+
+.promo-box.row {
+    justify-content: space-between;
+}
+
+.promo-box.row i {
+    margin-top: 6px;
+    margin-bottom: auto;
+}
+
+.promo-box.row img {
+    margin-left: 25px;
+}
+
+.promo-box.row h3 {
+    margin-left: 10px;
+    color: #000;
 }
