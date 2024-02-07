@@ -1,0 +1,62 @@
+body {
+    background-color: yellow;
+    z-index: 2;
+}
+
+nav {
+    z-index: 4;
+}
+
+nav a h3 {
+    display: block;
+    margin-left: 1rem;
+    margin-top: 8px;
+}
+
+nav a:hover {
+    display: none;
+}
+
+ nav a h3 { /*nav menu attributes */
+    padding: 0 4%;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+nav a h3:hover {
+    transform: translateY(-2px);
+    background-color: #00000042;
+    border-radius: 10px;
+} 
+
+
+.nav-menu.row {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0; /* without this, there is overlap into the hero */
+}
+
+.nav-menu {
+    position: fixed;
+    background-color: thistle;
+    height: 100vh;
+    width: 160px;
+    top: 0;
+    right: -160px; /*! Add transition here */
+}
+
+/** Icons for Menu */
+.fa-solid.icons {
+    display: block;
+    color: #fff;
+    margin: 1rem;
+}
+
+.icons#close {
+    font-size: 28px;
+}
+
+.icons#menu {
+    font-size: 28px;
+    margin-left: auto;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owl Coffee</title>
+
+    <link rel="stylesheet" href="default.css"> <!-- Desktop CSS version -->
+    <link rel="stylesheet" media="all and (max-width: 1100px)" href="tablet.css"> <!-- Tablet CSS Version -->
+    <link rel="stylesheet" media="all and (max-width: 500px)" href="mobile.css"> <!-- Mobile/Phone CSS Version -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="col"> <!-- a Gridbox to nest everything nicely (centred) -->
+        <nav class="nav-menu row" id="nav-menu"> <!--TODO align these properly and create a hover effect to play with -->
+            <i class="fa-solid fa-circle-xmark icons" id="close" onclick="hideMenu()"></i> <!-- It has appeared -->
+            <a href="#"><h3>ABOUT</h3></a>
+            <a href="#"><h3>MERCH</h3></a>
+            <a href="#"><h3>COFFEE</h3></a>
+            <a href="#"><h3>CONTACT</h3></a>
+        </nav>
+        <i class="fa-solid fa-bars icons" id="menu" onclick="showMenu()"></i>
+        <img src="media\logo.png" alt="Owl in a coffee cup.">
+        <div class="row">  <!--* .row will do all children in a flexbox meaning I can add it to anything and it will arrange it into a row. This will save me a lot of time when creating divs.-->
+            <h1>Owl Coffee</h1>
+            <span id="line"></span> <!--* line for breaking between the 2-->
+            <h2>Owl I need is<br><i>COFFEE</i></h2>
+        </div>
+        <!--! Arrow (Debatable)-->
+        <h2 id="arrowDown">&darr;</h2>
+
+    </header>
+    <div id="wave">
+        <svg viewBox="0 0 1440 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVG waves">
+            <path id="Vector 1" d="M261.119 104.448C141.023 105.216 43.4991 64.1386 0.488159 43.504V3.84906H1440.49V30.5474C1440.49 43.504 1422.82 72.8723 1344.09 92.4512C1054.39 164.498 853.565 43.504 724.031 43.504C520.189 43.504 411.239 103.488 261.119 104.448Z" fill="#29150D"/>
+            <path id="Vector 2" d="M161.043 87.3798C107.543 106.197 42.1192 98.0716 4.49805 87.3798H0.0429077V0H1440.04V111.5C1440.04 111.5 1405.04 77 1342.39 77C1276.25 77 1198.04 14.399 1040.04 14.399C882.05 14.399 836.543 54.2243 755.932 68.5623C571.774 101.317 429.043 42.4743 340.614 42.4743C262.87 42.4743 214.543 68.5623 161.043 87.3798Z" fill="#120906"/>
+            </g>
+            </svg>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

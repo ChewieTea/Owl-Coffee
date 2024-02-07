@@ -1,0 +1,122 @@
+:root {
+    --brown-black: #120906;
+    --brown-1: #3b1c0f;
+    --brown-2: #654b35;
+    --brown-3: #735b47;
+    --brown-grey: #454341;
+    font-family: 'Kanit', sans-serif, 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+}
+
+h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
+    color: #fff;
+}
+
+h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+}
+
+h4 {
+    margin: 0;
+    font-size: 38px;
+    color: #000;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    padding: .2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+}
+
+body {
+    /* background-color: var(--brown-black); */
+    padding: 0;
+    margin:0;
+}
+
+header { /** Hero background image */
+    background-image: linear-gradient(rgba(31, 21, 12, .8), #120906), url(media/coffee_banner.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+nav a { /*nav menu attributes */
+    padding: 0 4%;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
+nav a::after { /* hover animation for the nav menu */
+    content: '';
+    width: 100%;
+    height:3px;
+    background: var(--brown-3);
+    display: block;
+    margin: initial;
+    border-radius: 1px;
+    transform: scaleX(0%);
+    transition: 0.34s ease-in-out;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+    background-color: #00000042;
+    border-radius: 10px;
+}
+
+nav a:hover::after { 
+    transform: scaleX(100%);
+}
+
+header img { /* Big Logo */
+    width: 20rem;
+    margin: 4.4rem 0rem 1rem;
+}
+
+span#line { /*Intersecting line to seperate title from slogan */
+    width: 3px;
+    height: 100px;
+    background-color: var(--brown-2);
+    margin: 0 10px;
+}
+
+h2 i { /* what makes COFFEE look different */
+    font-weight: 800;
+    color: #caa07d;
+}
+/*? I want this to appear on delay and only if the header is still on screen after 5 seconds or so */
+h2#arrowDown { /* The Arrow */
+    margin-left: 1.1rem;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+div#wave { /* avoids pixels showing white between wave and header, leading to a seamless look */
+    transform: translateY(-4px);
+}
+
+/** Hides the icons until mobile */
+.fa-solid.icons {
+    display: none;
+}
