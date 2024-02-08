@@ -32,6 +32,7 @@ h4 {
     margin: 0;
     font-size: 38px;
     color: #000;
+    text-align: center;
 }
 
 .row {
@@ -176,4 +177,86 @@ div#wave { /* avoids pixels showing white between wave and header, leading to a 
 .promo-box.row h3 {
     margin-left: 10px;
     color: #000;
+}
+
+/*~~ About Us */
+
+.about svg { /* the underline */
+    width: 70vw;
+    transform: translateY(-12px);
+}
+
+.about .row > * {
+    margin: 1%;
+}
+
+/*Text box stuff */
+.box-content {
+    max-width: 40vw;
+    min-width: 20vw;
+    background-color: var(--brown-black);
+    border-radius: 1rem;
+
+}
+
+.box-content p {
+    color: #D9D9D9;
+    font-size: 18px;
+    line-height: 2rem;
+    margin-bottom: 1.6rem;
+}
+
+.box-content button {
+    /* background: url(media/coffee_button.svg);
+    background-size: cover;
+    background-repeat: no-repeat; */
+
+    position: relative;
+    margin-right: auto;
+    padding: .4rem 1rem;
+    
+    border: none;
+    background: none;
+
+    z-index: 4;
+}
+
+.box-content h2 {
+    position: relative;
+    margin-right: auto;
+    margin-bottom: 10px;
+    text-align: right;
+
+    color: var(--brown-black);
+    transform: translate(70px,0);
+    z-index: 4;
+    cursor: pointer;
+
+    transition:  all .23s ease-in-out;
+}
+
+.box-content #button::before {
+    content: url(media/coffee_button.svg);
+    position: absolute;
+    min-width: 275%;
+    transform: translate(-70px,-5px);
+    z-index: -1;
+
+    transition: all .3s ease-in-out;
+}
+
+/* button hover */
+.box-content h2:hover {
+    color: #fff;
+}
+
+.box-content #button:hover:before {
+    filter: drop-shadow(7px 7px 6px var(--brown-black)) invert(110%);
+    -webkit-filter: drop-shadow(7px 7px 6px var(--brown-black)) invert(110%);
+}
+
+/* Gif lines */
+.about img { 
+    width: 35vw;
+    border-radius: 1rem;
 }
