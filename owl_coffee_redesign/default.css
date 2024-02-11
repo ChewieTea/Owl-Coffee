@@ -255,6 +255,11 @@ svg#underline { /* the underline */
     -webkit-filter: drop-shadow(7px 7px 6px var(--brown-black)) invert(110%);
 }
 
+.box-content #button:active:before {
+    filter: drop-shadow(7px 7px 6px var(--brown-black)) invert(60%);
+    -webkit-filter: drop-shadow(7px 7px 6px var(--brown-black)) invert(60%);
+}
+
 /* Gif lines */
 .about img { 
     width: 35vw;
@@ -262,16 +267,41 @@ svg#underline { /* the underline */
 }
 
 /* Merch section */
-.row.scroller {
+.scroller {
     background-color: var(--brown-black);
+    max-width: 65%;
     padding: 3rem 0;
     border-radius: 1rem;
     flex-wrap: wrap;
 
-    -webkit-mask: linear-gradient(90deg, var(--brown-black), white 10%, white 90%, var(--brown-black));
-    mask: linear-gradient(90deg, var(--brown-black) 5%, white 30%, white 70%, var(--brown-black) 95%);
-    outline: green 4px solid; /*! fix this */
+    outline: green 4px solid;
 }
+/* .row {
+    display: flex;
+    flex-direction: row;
+    padding: .2rem;
+    align-items: center;
+    justify-content: center;
+} */
+
+.scroller[data-animated="true"] { /* will only start working when the data animated is actually set and true */
+    overflow: hidden; 
+    /* -webkit-mask: linear-gradient(90deg, var(--brown-black), white 10%, white 90%, var(--brown-black));
+    mask: linear-gradient(90deg, var(--brown-black) 5%, white 30%, white 70%, var(--brown-black) 95%); */
+}
+
+.scroller-items[data-animated="true"] {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 8s linear infinite;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(-100%);
+    }
+}
+
 /* 
 .scroller-items {
     -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
@@ -287,12 +317,16 @@ button#shop {
     font-size: 24px;
     color: #fff;
     background-color: var(--brown-black);
+    border: none;
 
     cursor: pointer;
     transition: all .2s ease-in-out;
 }
 
 button#shop:hover {
-    color: #000;
-    background-color: var(--brown-3);
+    background-color: var(--brown-1);
+}
+
+button#shop:active {
+    background-color: var(--brown-2);
 }
