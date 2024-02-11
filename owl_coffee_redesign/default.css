@@ -181,7 +181,7 @@ div#wave { /* avoids pixels showing white between wave and header, leading to a 
 
 /*~~ About Us */
 
-.about svg { /* the underline */
+svg#underline { /* the underline */
     width: 70vw;
     transform: translateY(-12px);
 }
@@ -259,4 +259,40 @@ div#wave { /* avoids pixels showing white between wave and header, leading to a 
 .about img { 
     width: 35vw;
     border-radius: 1rem;
+}
+
+/* Merch section */
+.row.scroller {
+    background-color: var(--brown-black);
+    padding: 3rem 0;
+    border-radius: 1rem;
+    flex-wrap: wrap;
+
+    -webkit-mask: linear-gradient(90deg, var(--brown-black), white 10%, white 90%, var(--brown-black));
+    mask: linear-gradient(90deg, var(--brown-black) 5%, white 30%, white 70%, var(--brown-black) 95%);
+    outline: green 4px solid; /*! fix this */
+}
+/* 
+.scroller-items {
+    -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+    mask: linear-gradient(90deg, transparent 5%, white 30%, white 70%, transparent 95%);
+} */
+
+/*TODO button looks */
+button#shop {
+    margin-top: .75rem;
+    padding: .75rem 5rem;
+    border-radius: 4px 12px 4px 12px;
+    
+    font-size: 24px;
+    color: #fff;
+    background-color: var(--brown-black);
+
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+button#shop:hover {
+    color: #000;
+    background-color: var(--brown-3);
 }
