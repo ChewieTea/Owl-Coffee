@@ -9,17 +9,16 @@ function hideMenu() {
 
 // Scroll Animation
 
-const scrollerRows = document.querySelectorAll('.scroller');
+const scrollers = document.querySelectorAll('.scroller');
 
 if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     addAnimationRow();
 }
 
-
 function addAnimationRow() {
-    scrollerRows.forEach(scrollerRow => { // Scroller row
-        scrollerRow.setAttribute('data-animated', true);
-
+    scrollers.forEach((scroller) => { // Scroller row
+        scroller.setAttribute('data-animated', true);
+    });
         const scrollerInner = document.querySelector('.scroller-items'); // row
         const scrollerContent = Array.from(scrollerInner.children); // duplicate child wrap?
 
@@ -28,5 +27,4 @@ function addAnimationRow() {
             duplicatedItem.setAttribute('aria-hidden', true);
             scrollerInner.appendChild(duplicatedItem);
         })
-    })
 }

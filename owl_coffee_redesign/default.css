@@ -267,40 +267,54 @@ svg#underline { /* the underline */
 }
 
 /* Merch section */
+
+/*TODO background */
+.merch {
+    background-color: rgb(23, 22, 22);
+}
+
+.merch h4 {
+    color: #dedede;
+}
+
 .scroller {
-    background-color: var(--brown-black);
-    max-width: 65%;
-    padding: 3rem 0;
-    border-radius: 1rem;
-    flex-wrap: wrap;
-
-    outline: green 4px solid;
+    max-width: 90%;
 }
-/* .row {
+
+
+.scroller-items {
     display: flex;
-    flex-direction: row;
-    padding: .2rem;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-} */
-
-.scroller[data-animated="true"] { /* will only start working when the data animated is actually set and true */
-    overflow: hidden; 
-    /* -webkit-mask: linear-gradient(90deg, var(--brown-black), white 10%, white 90%, var(--brown-black));
-    mask: linear-gradient(90deg, var(--brown-black) 5%, white 30%, white 70%, var(--brown-black) 95%); */
+    justify-content: space-between;
+    gap: 1rem;
 }
 
-.scroller-items[data-animated="true"] {
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+    mask: linear-gradient(90deg, transparent 5%, white 30%, white 70%, transparent 95%);
+
+    outline: 3px solid lime;
+
+}
+
+.scroller[data-animated="true"] .scroller-items {
     width: max-content;
     flex-wrap: nowrap;
-    animation: scroll 8s linear infinite;
+    animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll {
     to {
-        transform: translate(-100%);
+        transform: translate(calc(-50% - .5rem));
     }
 }
+
+.scroller-items > * {
+    border-radius: .26rem;
+}
+
 
 /* 
 .scroller-items {
@@ -315,8 +329,8 @@ button#shop {
     border-radius: 4px 12px 4px 12px;
     
     font-size: 24px;
-    color: #fff;
-    background-color: var(--brown-black);
+    color: rgb(23, 22, 22);
+    background-color: #D9D9D9;
     border: none;
 
     cursor: pointer;
