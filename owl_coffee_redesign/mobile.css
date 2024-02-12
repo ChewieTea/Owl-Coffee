@@ -128,3 +128,18 @@ span#line { /*Intersecting line to seperate title from slogan */
     min-width: 60vw;
     justify-content: space-between;
 }
+
+/*TODO box content */
+
+.about .row {
+    flex-direction: column;
+}
+
+.box-content {
+    max-width: 90%;
+    min-width: 60%;
+}
+
+.about img {
+    width: 85vw;
+}

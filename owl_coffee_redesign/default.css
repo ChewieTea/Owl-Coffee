@@ -196,7 +196,6 @@ svg#underline { /* the underline */
     min-width: 20vw;
     background-color: var(--brown-black);
     border-radius: 1rem;
-
 }
 
 .box-content p {
@@ -302,7 +301,7 @@ svg#underline { /* the underline */
 .scroller[data-animated="true"] .scroller-items {
     width: max-content;
     flex-wrap: nowrap;
-    animation: scroll 20s linear infinite;
+    /* animation: scroll 20s linear infinite; */
 }
 
 @keyframes scroll {
@@ -338,9 +337,16 @@ button#shop {
 }
 
 button#shop:hover {
-    background-color: var(--brown-1);
+    color: #fff;
+    background-color: #262626;
+
+    -webkit-box-shadow:6px 4px 10px 3px #8a8a8a;
+    -moz-box-shadow:6px 4px 10px 3px #8a8a8a;
+    box-shadow: 6px 4px 10px 3px #8a8a8a;
+
+    transform: translateY(-4px) scale(102%);
 }
 
 button#shop:active {
-    background-color: var(--brown-2);
+    background-color: #6E6E6E;
 }

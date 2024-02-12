@@ -64,3 +64,18 @@ body {
     letter-spacing: -0.8px;
     line-height: 1em;
 }
+
+/*TODO box content */
+
+.about .row {
+    flex-direction: column;
+}
+
+.box-content {
+    max-width: 90%;
+    min-width: 60%;
+}
+
+.about img {
+    width: 80vw;
+}
