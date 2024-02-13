@@ -79,3 +79,23 @@ body {
 .about img {
     width: 80vw;
 }
+
+/*TODO ~~ coffee */
+
+.grid-box img {
+    max-width: 75%;
+}
+
+.grid-box > * {
+    margin: 4px;
+    padding: .4rem;
+}
+
+.grid-box > * h2 { /* the i and circle */
+    font-size: 14px;
+    margin-bottom: auto;
+    padding-inline: 8px;
+
+    border: 1.6px #dedede solid;
+    border-radius: 10rem;
+}

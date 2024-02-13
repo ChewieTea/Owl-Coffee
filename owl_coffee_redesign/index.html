@@ -6,8 +6,9 @@
     <title>Owl Coffee</title>
 
     <link rel="stylesheet" href="default.css"> <!-- Desktop CSS version -->
-    <link rel="stylesheet" media="all and (max-width: 950px)" href="tablet.css"> <!-- Tablet CSS Version -->
-    <link rel="stylesheet" media="all and (max-width: 550px)" href="mobile.css"> <!-- Mobile/Phone CSS Version -->
+    <link rel="stylesheet" media="all and (max-width: 950px)" href="tablet.css"> <!-- ?Tablet CSS Version -->
+    <link rel="stylesheet" media="all and (max-width: 550px)" href="mobile.css"> <!-- ?Mobile/Phone CSS Version -->
+    <link rel="stylesheet" media="all and (max-width: 310px)" href="mobile_sm.css"> <!--? SMALL Mobile/Phone CSS Version (grid)-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Roboto+Condensed&display=swap" rel="stylesheet">
@@ -24,7 +25,7 @@
         </nav>
         <i class="fa-solid fa-bars icons" id="menu" onclick="showMenu()"></i>
         <img src="media\logo.png" alt="Owl in a coffee cup.">
-        <div class="row">  <!--* .row will do all children in a flexbox meaning I can add it to anything and it will arrange it into a row. This will save me a lot of time when creating divs.-->
+        <div class="row hero">  <!--* .row will do all children in a flexbox meaning I can add it to anything and it will arrange it into a row. This will save me a lot of time when creating divs.-->
             <h1>Owl Coffee</h1>
             <span id="line"></span> <!--* line for breaking between the 2-->
             <h2>Owl I need is<br><i>COFFEE</i></h2>
@@ -42,6 +43,7 @@
                 </g>
                 </svg>
         </div>
+
         <div class="promo-wrap">
             <div class="promo-box row" href="#">
                 <i class="fa-solid fa-circle-info"></i>
@@ -80,27 +82,101 @@
         </div>
 
     </section>
-    <section class="col merch">
-        <div>
-            <h4>Merch</h4>
-            <svg id="underline" viewBox="0 0 982 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.566243 14.5L15 28.9338L29.4338 14.5L15 0.0662432L0.566243 14.5ZM981.434 14.5L967 0.0662432L952.566 14.5L967 28.9338L981.434 14.5ZM15 17L967 17V12L15 12V17Z" fill="#dedede"/>
-                </svg> <!-- underline -->                
-        </div>
-        <div class="scroller">
-            <div class="scroller-items">
-                <img src="media/merch/apron1.jpg" alt="">
-                <img src="media/merch/apron1.jpg" alt="">
-                <img src="media/merch/apron1.jpg" alt="">
-                <img src="media/merch/apron1.jpg" alt="">
-                <img src="media/merch/apron1.jpg" alt="">
-                <img src="media/merch/apron1.jpg" alt="">
+    <section> <!--* merch/coffee -->
+            <div class="merch-wave">
+                <svg viewBox="0 0 1440 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M323.286 3.08647C200.989 -5.88727 56.8047 6.82552 0 14.3036V24.5H1440V23.5C1440 23.5 1077.48 -4.39273 921.74 14.3036C766 33 476.157 14.3036 323.286 3.08647Z" fill="rgb(23, 22, 22)"/>
+                </svg>
             </div>
-        </div>
-        <button id="shop">Shop Now</button> 
+            <div class="col merch">
 
+                <div>
+                    <h4>Merch</h4>
+                    <svg id="underline" viewBox="0 0 982 29" fill="none" xmlns="http://www.w3.  org/2000/svg">
+                        <path d="M0.566243 14.5L15 28.9338L29.4338 14.5L15 0.0662432L0.566243 14.5ZM981.434 14.5L967 0.0662432L952.566 14.5L967 28.9338L981.434 14.5ZM15 17L967 17V12L15 12V17Z" fill="#dedede"/>
+                        </svg> <!-- underline -->                
+                </div>
+                <div class="scroller">
+                    <div class="scroller-items">
+                        <img src="media/merch/apron1.jpg" alt="">
+                        <img src="media/merch/apron1.jpg" alt="">
+                        <img src="media/merch/apron1.jpg" alt="">
+                        <img src="media/merch/apron1.jpg" alt="">
+                        <img src="media/merch/apron1.jpg" alt="">
+                        <img src="media/merch/apron1.jpg" alt="">
+                    </div>
+                </div>
+                <button id="shop">Shop Now</button> 
+            </div>
+                <div class="coffee-wave">
+                    <svg viewBox="0 0 1440 60" shape-rendering="geometricPrecision"     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/    xlink"text-rendering="geometricPrecision"><path d="M323.286,7.497603C200.989,   -14.527145,56.8047,16.674561,0,35.028428v25.02559h1440v-14.825719c0,0-351. 451648-26.678533-518.26-10.199871s-445.583,0-598.454-27.530825Z" fill="#29150D"/></svg>
 
+                </div>
+            <div class="section-coffee">
+                <div class="coffee">
+                    <div class="col">
+                        <div>
+                            <h4>Coffee</h4>
+                            <svg id="underline" viewBox="0 0 982 29" fill="none" xmlns="http:// www.w3.org/2000/svg">
+                                <path d="M0.566243 14.5L15 28.9338L29.4338 14.5L15 0.0662432L0.566243 14.5ZM981.434 14.5L967 0.0662432L952.566 14.5L967 28.9338L981.434 14.5ZM15 17L967 17V12L15 12V17Z" fill="#dedede"/>
+                                </svg> <!-- underline -->                
+                        </div>
+                        </div>
+                        <div class="grid-box">
+                            <a href="#"><div class="row grid-items">
+                                <h2>i</h2>
+                                <div class="col">
+                                    <img src="media/bean.png" alt="a few coffee beans">
+                                    <h3>coffee</h3>
+                                </div>
+                            </div></a>
+                            <a href="#"><div class="row grid-items">
+                                <h2>i</h2>
+                                <div class="col">
+                                    <img src="media/bean.png" alt="a few coffee beans">
+                                    <h3>coffee</h3>
+                                </div>
+                            </div></a>
+                            <a href="#"><div class="row grid-items">
+                                <h2>i</h2>
+                                <div class="col">
+                                    <img src="media/bean.png" alt="a few coffee beans">
+                                    <h3>coffee</h3>
+                                </div>
+                            </div></a>
+                            <a href="#"><div class="row grid-items">
+                                <h2>i</h2>
+                                <div class="col">
+                                    <img src="media/bean.png" alt="a few coffee beans">
+                                    <h3>coffee</h3>
+                                </div>
+                            </div></a>
+                            <a href="#"><div class="row grid-items">
+                                <h2>i</h2>
+                                <div class="col">
+                                    <img src="media/bean.png" alt="a few coffee beans">
+                                    <h3>coffee</h3>
+                                </div>
+                            </div></a>
+                            <a href="#"><div class="row grid-items">
+                                <h2>i</h2>
+                                <div class="col">
+                                    <img src="media/bean.png" alt="a few coffee beans">
+                                    <h3>coffee</h3>
+                                </div>
+                            </div></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="coffee-wave bottom">
+                <svg id="et7JVqEwbrO1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 58" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><path d="M0.007514,139.848663q438.386369,30.52706,563.367321,30.377188c127.665703-.153093,391.772637-30.418922,589.761718-30.22719q197.989081.191732,286.863446,30.341223l-.000001,27.291695h-1440.000001l.007517-57.782916Z" transform="matrix(-1 0.00013-.00013-1 1440.018208 197.631577)" fill="#29150D"/></svg>
+
+            </div>
     </section>
+
+
 
 
 <script src="script.js"></script>

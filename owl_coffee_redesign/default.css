@@ -7,6 +7,10 @@
     font-family: 'Kanit', sans-serif, 'Roboto Condensed', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     margin: 0;
     font-size: 40px;
@@ -205,21 +209,6 @@ svg#underline { /* the underline */
     margin-bottom: 1.6rem;
 }
 
-.box-content button {
-    /* background: url(media/coffee_button.svg);
-    background-size: cover;
-    background-repeat: no-repeat; */
-
-    position: relative;
-    margin-right: auto;
-    padding: .4rem 1rem;
-    
-    border: none;
-    background: none;
-
-    z-index: 4;
-}
-
 .box-content h2 {
     position: relative;
     margin-right: auto;
@@ -265,7 +254,11 @@ svg#underline { /* the underline */
     border-radius: 1rem;
 }
 
-/* Merch section */
+/** Merch section */
+
+.merch-wave {
+    transform: translateY(8px);
+}
 
 /*TODO background */
 .merch {
@@ -324,7 +317,8 @@ svg#underline { /* the underline */
 /*TODO button looks */
 button#shop {
     margin-top: .75rem;
-    padding: .75rem 5rem;
+    margin-bottom: 80px;
+    padding: .75rem 7rem;
     border-radius: 4px 12px 4px 12px;
     
     font-size: 24px;
@@ -349,4 +343,73 @@ button#shop:hover {
 
 button#shop:active {
     background-color: #6E6E6E;
+}
+
+/*TODO COFFEE */
+.coffee-wave {
+    transform: translateY(-66px);
+}
+
+.coffee-wave svg {
+    background-color: transparent;
+}
+
+.coffee-wave.bottom {
+    transform: translateY(-76px);
+}
+
+.section-coffee {
+    padding: 1rem;
+    background: #29150D;
+    transform: translateY(-74px);
+}
+
+.coffee h4 {
+    color: #dedede;
+}
+/* grid section */
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.grid-box:nth-child(1) { grid-area: 1 / 1 / 2 / 2; }
+.grid-box:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
+.grid-box:nth-child(3) { grid-area: 1 / 3 / 2 / 4; }
+.grid-box:nth-child(4) { grid-area: 2 / 1 / 3 / 2; }
+.grid-box:nth-child(5) { grid-area: 2 / 2 / 3 / 3; }
+.grid-box:nth-child(6) { grid-area: 2 / 3 / 3 / 4; }
+
+.grid-box img {
+    max-width: 50%;
+}
+
+.row.grid-items {
+    flex-direction: row-reverse;
+}
+
+.grid-box > * {
+    margin: 8px;
+    padding: 1rem;
+
+    border: 2px #dedede solid;
+    border-radius: .5em;
+
+    transition: .26s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.grid-box > * h2 { /* the i and circle */
+    font-size: 18px;
+    margin-bottom: auto;
+    padding-inline: 10px;
+
+    border: 1.6px #dedede solid;
+    border-radius: 10rem;
+}
+
+.grid-box > *:hover {
+    transform: translateY(-8px) scale(102%);
+    background-color: #4543412d;
 }
