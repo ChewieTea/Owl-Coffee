@@ -294,7 +294,7 @@ svg#underline { /* the underline */
 .scroller[data-animated="true"] .scroller-items {
     width: max-content;
     flex-wrap: nowrap;
-    /* animation: scroll 20s linear infinite; */
+    animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll {
