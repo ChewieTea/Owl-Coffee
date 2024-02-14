@@ -410,6 +410,32 @@ button#shop:active {
 }
 
 .grid-box > *:hover {
-    transform: translateY(-8px) scale(102%);
-    background-color: #4543412d;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, .4) 50%, rgba(0,0,0,.2) 100%);
+}
+/** The hover cards for the coffee grid boxes */
+.grid-items[data-tool-tip] {
+    position: relative;
+}
+
+.grid-items[data-tool-tip]::after {
+    content: attr(data-tool-tip);
+    display:block;
+    position:absolute;
+    max-width: 95%;
+    max-height: 50%;
+    background-color: rgb(182, 182, 182);
+    padding:.6em .8em;
+    color:black;
+    border-radius: .6rem;
+    top: 0;
+    z-index: 2;
+
+    transform: scaleY(0);
+    transform-origin: 50% 0%;
+    transition:all .3s cubic-bezier(.43,.27,.48,1);
+}
+
+.grid-items[data-tool-tip]:hover::after {
+    transform: scaleY(1);
 }
