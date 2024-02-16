@@ -467,9 +467,80 @@ button#shop:active {
     width: 40px;
 }
 
+.contact svg#col-break {
+    width: 40%;
+    margin-bottom: .8rem;
+}
+
 .contact svg#break {
     width: 20px;
 }
 
+.contact p {
+    color: #dedede;
+}
+
 /*! Finish the text box styles */
 
+input {
+    width: 25svw;
+    margin: 1%;
+    margin-right: auto;
+
+    padding: .5em;
+    background-color: #DFD6CE;
+    border: none;
+    border-radius: .3em;
+    font-size: 18px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--brown-black);
+    font-family: 'Kanit', sans-serif, 'Roboto Condensed', sans-serif;
+
+}
+
+textarea {
+    width: 40vw;
+    margin: 1%;
+    margin-right: auto;
+
+    padding: .5em;
+    background-color: #DFD6CE;
+    border: none;
+    border-radius: .3em;
+    font-size: 18px;
+}
+
+.contact button {
+    padding: .6rem 2.4rem;
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-right: auto;
+
+    font-size: 24px;
+    font-family: 'Kanit', sans-serif, 'Roboto Condensed', sans-serif;
+    background-color: #735B47;
+    color: #fff;
+
+    border: none;
+    border-radius: 4px 12px;
+
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.contact button:hover {
+    color: #fff;
+    background-color: #262626;
+
+    -webkit-box-shadow:6px 4px 10px 3px #8a8a8a;
+    -moz-box-shadow:6px 4px 10px 3px #8a8a8a;
+    box-shadow: 6px 4px 10px 3px #8a8a8a;
+
+    transform: translateY(-4px) scale(102%);
+}
+
+.contact button:active {
+    background-color: #6E6E6E;
+}

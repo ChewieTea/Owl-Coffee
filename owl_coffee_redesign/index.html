@@ -197,7 +197,7 @@
                 </svg>
             <h3><b>The Rock</b></h3>
             <h3>Bury, Greater Manchester</h3>
-            <svg width="171" height="3" viewBox="0 0 171 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="col-break" height="3" viewBox="0 0 171 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="0.987701" y1="1.5" x2="170.988" y2="1.5" stroke="#DAC3B0" stroke-width="2"/>
                 </svg>
             <svg viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -206,7 +206,7 @@
                 </svg>
             <h3><b>mattTheTwink@hotmail.com</b></h3>
             <p>Please treat our staff with respect.</p>
-            <svg width="171" height="3" viewBox="0 0 171 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="col-break" height="3" viewBox="0 0 171 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="0.987701" y1="1.5" x2="170.988" y2="1.5" stroke="#DAC3B0" stroke-width="2"/>
                 </svg>
             <svg viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -215,17 +215,19 @@
             <h3><b>+44 XXXX XXXXX</b></h3>
             <h3><b>Mon - Sat:</b> 8.00am - 6.00pm</h3>
             <h3><b>Sun:</b> 9.00am - 5.30pm</h3>
+
         </div>
+        <!-- horizontal line break -->
         <svg id="break" height="420px" viewBox="0 0 16 478" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 0.783119L0.783122 8L8 15.2169L15.2169 8L8 0.783119ZM9.25 478L9.25 8H6.75L6.75 478H9.25Z" fill="#8A8076"/>
             </svg>
         <div class="col">
-                <input type="text" name="name" id="name" placeholder="Name.." required>
-                <input type="text" name="email" id="email" placeholder="Email.." required> <!--! "text" needs to  be "email" specific but the animation stops working on the first character otherwise. -->
-                <input type="text" name="subject" id="subject" placeholder="Subject.." required>
-                <textarea name="message" rows="8" id="message" required></textarea>
+            <input type="text" name="name" id="name" placeholder="Name.." required>
+            <input type="text" name="email" id="email" placeholder="Email.." required> <!--! "text" needs to  be "email" specific but the animation stops working on the first character otherwise. -->
+            <input type="text" name="subject" id="subject" placeholder="Subject.." required>
+            <textarea name="message" rows="8" id="message" placeholder="Message.." required></textarea>
 
-            <button type="submit" class="send">Send</button>
+            <button type="submit" class="send">Send Message</button>
 
         </div>
     </div>
