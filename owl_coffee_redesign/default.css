@@ -439,3 +439,37 @@ button#shop:active {
 .grid-items[data-tool-tip]:hover::after {
     transform: scaleY(1);
 }
+
+/* Contact us */
+
+.contact iframe {
+    width: 90%;
+    min-height: 50vh;
+}
+
+.contact .row {
+    background-color: var(--brown-black);
+    margin-top: 2rem;
+    padding: 1.4rem;
+    width: 80%;
+    border-radius: 1rem;
+}
+
+/* .contact .col.one {
+    text-align: left; /*! This isn't working ~ fixed by margin auto-ing each child of this selected element */
+/* } */
+
+.col.one > * {
+    margin-left: auto;
+}
+
+.contact svg {
+    width: 40px;
+}
+
+.contact svg#break {
+    width: 20px;
+}
+
+/*! Finish the text box styles */
+
