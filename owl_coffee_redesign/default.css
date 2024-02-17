@@ -500,6 +500,10 @@ input::placeholder, textarea::placeholder {
 
 }
 
+input:focus, textarea:focus {
+    background-color: #dedede;
+}
+
 textarea {
     width: 40vw;
     margin: 1%;
@@ -513,7 +517,7 @@ textarea {
 }
 
 .contact button {
-    padding: .6rem 2.4rem;
+    padding: .2rem 2.4rem;
     margin-top: 2%;
     margin-left: 1%;
     margin-right: auto;
