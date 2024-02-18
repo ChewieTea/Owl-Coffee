@@ -99,3 +99,57 @@ body {
     border: 1.6px #dedede solid;
     border-radius: 10rem;
 }
+
+/*TODO contact section */
+
+.contact iframe {
+    width: 95%;
+    border-radius: .4rem;
+}
+
+.contact .row {
+    width: 98%;
+    padding: .6rem;
+}
+
+.col.one, .col.two {
+    padding: .8em;
+}
+
+.contact svg {
+    width: 36px;
+}
+
+.contact h3 {
+    font-size: 16px;
+    text-align: right;
+}
+
+.contact p {
+    margin: 0 0 2% 0;
+    font-size: 14px;
+    text-align: right;
+}
+
+.contact input, .contact textarea {
+    max-width: min-content;
+    padding: .2em .3em;
+    width: 35vw;
+}
+
+.contact input::placeholder, .contact textarea::placeholder {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact button {
+    padding: 0.2em 1em;
+    margin-top: 1%;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 20px;
+}
+
+.contact svg#break {
+    width: 12px;
+}
