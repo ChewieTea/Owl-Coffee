@@ -191,3 +191,50 @@ button#shop {
     border: 1.6px #dedede solid;
     border-radius: 10rem;
 }
+/* TODO Data tool tip */
+
+.grid-items[data-tool-tip]::after {
+    font-size: 11px;
+}
+
+/*TODO contact section */
+
+.contact .row {
+    flex-direction: column;
+}
+
+.contact svg#break {
+    display: none;
+}
+
+.contact svg {
+    width: 32px;
+}
+
+.col.one > * {
+    margin-left: 0;
+}
+
+.contact h3 {
+    font-size: 16px;
+    text-align: center;
+}
+
+.contact p {
+    font-size: 12px;
+    text-align: center;
+}
+
+.col.one, .col.two {
+    justify-content: center;
+    width: 100%;
+}
+
+.contact input, .contact textarea {
+    width: 100vw;
+    margin-right: 0;
+}
+
+.contact button {
+    font-size: 18px;
+}
