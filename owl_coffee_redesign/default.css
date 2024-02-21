@@ -620,7 +620,7 @@ footer .grid {
     grid-template-rows: 1fr;
     grid-column-gap: 2%;
 
-    padding-top: .8rem;
+    padding-top: 1.4rem;
 
     justify-items: center;
     align-items: center;
@@ -660,4 +660,9 @@ div#footer-text p, footer .links h3, footer h4 {
 
 .media h4 {
     font-weight: 300;
+}
+
+/** Forcing the space between contact col and the coffee section to tighten */
+.contact {
+    transform: translateY(-50px);
 }
