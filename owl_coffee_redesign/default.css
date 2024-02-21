@@ -272,6 +272,7 @@ svg#underline { /* the underline */
     text-align: center;
     background-color: #C6B6A9;
     border-radius: 12px 2px;
+    border: none;
     color:#1b0a02;
     overflow:hidden;
     font-weight: 700;
@@ -563,7 +564,7 @@ textarea {
     font-size: 18px;
 }
 
-.contact button {
+/* .contact button {
     padding: .2rem 2.4rem;
     margin-top: 2%;
     margin-left: 1%;
@@ -594,6 +595,13 @@ textarea {
 
 .contact button:active {
     background-color: #6E6E6E;
+} */
+
+.contact .hero-btn {
+    margin-top: 7px;
+    margin-left: 1%;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 /*TODO footer */
