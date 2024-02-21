@@ -124,8 +124,8 @@ body {
     padding: .8em;
 }
 
-.contact svg {
-    width: 36px;
+footer .media svg {
+    width: 32px;
 }
 
 .contact h3 {
@@ -134,7 +134,7 @@ body {
 }
 
 .contact p {
-    margin: 0 0 2% 0;
+    margin: 0 1% 2%;
     font-size: 14px;
     text-align: right;
 }
@@ -160,4 +160,8 @@ body {
 
 .contact svg#break {
     width: 12px;
+}
+
+footer img {
+    max-width: 50%;
 }

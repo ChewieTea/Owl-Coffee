@@ -99,3 +99,23 @@ button#shop {
 .contact button {
     font-size: 16px;
 }
+
+footer .grid {
+    display:block;
+}
+
+footer .media svg {
+    width: 20px;
+}
+
+footer .media h4 {
+    font-size: 12px;
+}
+
+div#footer-text p {
+    font-size: 10px;
+}
+
+footer .links h3 {
+    font-size: 16px;
+}

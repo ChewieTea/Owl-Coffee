@@ -238,3 +238,36 @@ button#shop {
 .contact button {
     font-size: 18px;
 }
+
+/* Footer section */
+
+footer .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 2%;
+
+    padding-top: .8rem;
+
+    justify-items: center;
+    align-items: center;
+}
+    
+.grid .media { grid-area: 1 / 1 / 2 / 2; }
+.grid .links { grid-area: 1 / 2 / 2 / 3; }
+
+footer .media svg {
+    width: 24px;
+}
+
+footer img#logo {
+    display: none;
+}
+
+footer .links.row {
+    flex-direction: column;
+}
+
+footer .links.col {
+    padding: 0;
+}
