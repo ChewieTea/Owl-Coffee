@@ -5,6 +5,18 @@
     --brown-3: #735b47;
     --brown-grey: #454341;
     font-family: 'Kanit', sans-serif, 'Roboto Condensed', sans-serif;
+
+    scroll-behavior: smooth;
+}
+
+@media(prefers-reduced-motion) {
+    :root {
+        scroll-behavior: auto;
+    }
+    .scroller-items {
+        gap: 4px !important;
+        justify-content: center !important;
+    }
 }
 
 a {

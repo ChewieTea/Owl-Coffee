@@ -1,3 +1,10 @@
+/* The Official CSS3 StyleSheet for the Owl Coffee Index: Mobile.
+Only induced when: width < 550px
+
+Extra comments:
+    - Will change most .row flex directions into columns to make use of the vertical space and avoid the overflow issues from the first product.
+    - Has a nav menu for ease of use across the website.
+*/
 h1 {
     margin: 0;
     font-size: 30px;
@@ -25,10 +32,10 @@ h4 {
     color: #000;
 }
 
-body {
+/* body {
     background-color: yellow;
     z-index: 2;
-}
+} */
 
 /*TODO Nav Work for Phone */
 nav {

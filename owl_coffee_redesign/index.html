@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <header class="col"> <!-- a Gridbox to nest everything nicely (centred) -->
+    <header class="col" id="hero-section"> <!-- a Gridbox to nest everything nicely (centred) -->
         <nav class="nav-menu row" id="nav-menu"> <!--TODO align these properly and create a hover effect to play with -->
             <i class="fa-solid fa-circle-xmark icons" id="close" onclick="hideMenu()"></i> <!-- It has appeared -->
-            <a href="#"><h3>ABOUT</h3></a>
-            <a href="#"><h3>MERCH</h3></a>
-            <a href="#"><h3>COFFEE</h3></a>
-            <a href="#"><h3>CONTACT</h3></a>
+            <a href="#about-section"><h3>ABOUT</h3></a>
+            <a href="#merch-section"><h3>MERCH</h3></a>
+            <a href="#coffee-section"><h3>COFFEE</h3></a>
+            <a href="#contact-section"><h3>CONTACT</h3></a>
         </nav>
         <i class="fa-solid fa-bars icons" id="menu" onclick="showMenu()"></i>
         <img src="media\logo.png" alt="Owl in a coffee cup.">
@@ -65,7 +65,7 @@
     </section>
 
     <!--! After other versions are proofed-->
-    <section class="col about">
+    <section class="col about" id="about-section">
         <div>
             <h4>About Us</h4>
             <svg id="underline" viewBox="0 0 982 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,7 +86,7 @@
 
     </section>
     <section> <!--* merch/coffee -->
-            <div class="merch-wave">
+            <div class="merch-wave" id="merch-section">
                 <svg viewBox="0 0 1440 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M323.286 3.08647C200.989 -5.88727 56.8047 6.82552 0 14.3036V24.5H1440V23.5C1440 23.5 1077.48 -4.39273 921.74 14.3036C766 33 476.157 14.3036 323.286 3.08647Z" fill="rgb(23, 22, 22)"/>
                 </svg>
@@ -115,7 +115,7 @@
                     <svg viewBox="0 0 1440 60" shape-rendering="geometricPrecision"     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/    xlink"text-rendering="geometricPrecision"><path d="M323.286,7.497603C200.989,   -14.527145,56.8047,16.674561,0,35.028428v25.02559h1440v-14.825719c0,0-351. 451648-26.678533-518.26-10.199871s-445.583,0-598.454-27.530825Z" fill="#29150D"/></svg>
 
                 </div>
-            <div class="section-coffee">
+            <div class="section-coffee" id="coffee-section">
                 <div class="coffee">
                     <div class="col">
                         <div>
@@ -179,12 +179,12 @@
                     </div>
                 </div>
             </div>
-            <div class="coffee-wave bottom">
-                <svg id="et7JVqEwbrO1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 58" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><path d="M0.007514,139.848663q438.386369,30.52706,563.367321,30.377188c127.665703-.153093,391.772637-30.418922,589.761718-30.22719q197.989081.191732,286.863446,30.341223l-.000001,27.291695h-1440.000001l.007517-57.782916Z" transform="matrix(-1 0.00013-.00013-1 1440.018208 197.631577)" fill="#29150D"/></svg>
-            </div>
-    </section>
+        <div class="coffee-wave bottom">
+            <svg id="et7JVqEwbrO1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 58" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><path d="M0.007514,139.848663q438.386369,30.52706,563.367321,30.377188c127.665703-.153093,391.772637-30.418922,589.761718-30.22719q197.989081.191732,286.863446,30.341223l-.000001,27.291695h-1440.000001l.007517-57.782916Z" transform="matrix(-1 0.00013-.00013-1 1440.018208 197.631577)" fill="#29150D"/></svg>
+        </div>
+</section>
 
-<section class="contact col">
+<section class="contact col" id="contact-section">
     <h4>Contact Us</h4>
     <svg id="underline" viewBox="0 0 982 29" fill="none" xmlns="http://www.w3.  org/2000/svg">
         <path d="M0.566243 14.5L15 28.9338L29.4338 14.5L15 0.0662432L0.566243 14.5ZM981.434 14.5L967 0.0662432L952.566 14.5L967 28.9338L981.434 14.5ZM15 17L967 17V12L15 12V17Z" fill="rgb(23, 22, 22)"/>
@@ -270,12 +270,13 @@
         </div>
         <div class="links row">
             <div class="links col">
-                <a href="#"><h3>ABOUT</h3></a>
-                <a href="#"><h3>MERCH</h3></a>
+                <a href="#hero-section"><h3>HOME</h3></a>
+                <a href="#about-section"><h3>ABOUT</h3></a>
+                <a href="#merch-section"><h3>MERCH</h3></a>
             </div>
             <div class="links col">
-                <a href="#"><h3>COFFEE</h3></a>
-                <a href="#"><h3>CONTACT</h3></a>
+                <a href="#coffee-section"><h3>COFFEE</h3></a>
+                <a href="#contact-section"><h3>CONTACT</h3></a>
             </div>
         </div>
         <img id="logo" src="media/logo.png" alt="">

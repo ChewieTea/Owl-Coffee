@@ -1,6 +1,13 @@
-body {
+/* The Official CSS3 StyleSheet for the Owl Coffee Index: Small Devices.
+Only induced when: width < 3100px
+
+Extra comments:
+    - Mostly to fix what mobile.css couldn't in terms of thinner screen sizes.
+*/
+
+/* body {
     background: lightcoral;
-}
+} */
 
 /*TODO ~~ Hero */
 .hero h1 {

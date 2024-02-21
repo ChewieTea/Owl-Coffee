@@ -1,3 +1,9 @@
+/* The Official CSS3 StyleSheet for the Owl Coffee Index: Tablet.
+Only induced when: width < 950px
+
+Extra comments:
+    - Mostly the same as desktop but smaller font sizes and padding to make things more streamlined and fit the screen better. */
+
 h1 {
     margin: 0;
     font-size: 32px;
@@ -25,11 +31,12 @@ h4 {
     color: #000;
 }
 
-body {
+/* body {
     background-color: blue;
-}
+} */
 
 /*? Maybe on this version for PROMO i change the flex basis along with the text sizes */
+/* I ended up doing this manually for each where i needed it just in case. Not bad progress but next time I'll definitely plan out so that I can optimise it as best I can. */
 
 .promo-wrap {
     display: flex; /* Added */
