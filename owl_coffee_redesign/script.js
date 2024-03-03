@@ -5,8 +5,6 @@ const observerUp = new IntersectionObserver((entries) => {
     console.log(entry)
     if (entry.isIntersecting) {
       entry.target.classList.add('upward');
-    } else {
-      entry.target.classList.remove('upward');
     }
   });
 });
