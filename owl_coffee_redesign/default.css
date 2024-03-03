@@ -17,6 +17,12 @@
         gap: 4px !important;
         justify-content: center !important;
     }
+
+    .hidden {
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
 }
 
 .hidden {
