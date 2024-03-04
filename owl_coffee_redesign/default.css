@@ -9,6 +9,11 @@
     scroll-behavior: smooth;
 }
 
+::selection {
+    background-color:#3b1c0f;
+    color: #D9D9D9;
+}
+
 @media(prefers-reduced-motion) {
     :root {
         scroll-behavior: auto;
@@ -19,27 +24,44 @@
     }
 
     .hidden {
-        opacity: 1;
-        transform: none;
-        filter: none;
+        opacity: 1 !important;
+        filter: none !important;
+        transform: translateX(0) !important;
+        transition: none !important;
     }
 }
 
 .hidden {
     opacity: 0.7;
     transform: translateY(100%);
-    /* filter: blur(8px); */
+    filter: blur(2px);
     transition: all .6s;
+}
+
+.hidden[scale="True"] {
+    transform: scaleX(50%);
+    background-color: green;
 }
 
 .d300 { /* Delays the transition by 300ms */
     transition-delay: 300ms;
 }
 
+.d600 {
+    transition-delay: 600ms;
+}
+
+.transHalf {
+    transform: translateY(50%);
+}
+
 .dwave {
     max-width: calc(70vw / 7);
 }
 
+.upward [scale] {
+    transform: scaleX(100%);
+}
 
 .upward {
     opacity: 1;
