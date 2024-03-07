@@ -10,7 +10,7 @@
 }
 
 ::selection {
-    background-color:#3b1c0f;
+    background-color: #3b1c0f;
     color: #D9D9D9;
 }
 
@@ -18,6 +18,7 @@
     :root {
         scroll-behavior: auto;
     }
+
     .scroller-items {
         gap: 4px !important;
         justify-content: center !important;
@@ -26,61 +27,87 @@
     .hidden {
         opacity: 1 !important;
         filter: none !important;
-        transform: translateX(0) !important;
+        transform: translateX(0) translateY(0) !important;
         transition: none !important;
     }
 }
 
-.hidden {
-    opacity: 0.7;
-    transform: translateY(100%);
-    filter: blur(2px);
-    transition: all .6s;
+.scale {
+    /** Must be after hidden */
+    scale: .85;
+    filter: blur(0) !important;
 }
 
-.hidden[scale="True"] {
-    transform: scaleX(50%);
-    background-color: green;
+.d150 {
+    /* Delays the transition by 1500ms */
+    transition-delay: 150ms !important;
 }
 
-.d300 { /* Delays the transition by 300ms */
-    transition-delay: 300ms;
+.d300 {
+    /* Delays the transition by 300ms */
+    transition-delay: 300ms !important;
 }
 
 .d600 {
-    transition-delay: 600ms;
+    transition-delay: 600ms !important;
 }
 
-.transHalf {
-    transform: translateY(50%);
+.transY {
+    transform: translateY(70%);
 }
 
-.dwave {
-    max-width: calc(70vw / 7);
+.transX {
+    transform: translateX(-70%);
 }
 
-.upward [scale] {
-    transform: scaleX(100%);
+.hidden {
+    opacity: 0;
+    filter: blur(4px);
+    transition: all .4s ease-in;
 }
 
 .upward {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0);
-    max-width: calc(70vw / 1);
-}
-/*! setting up the delays and best animations possible for each project.
-/*! first i should finish changing the order of the website */
-/* .box-content .hidden:nth-child(1) {
-    transition-delay: 200ms;
+    transform: translateY(0) translateX(0);
+    scale: 1;
 }
 
-.box-content .hidden:nth-child(2) {
-    transition-delay: 400ms;
-} */
 
-/*! keyframes for .side
-/*! keyframes for .upward */
+.nav-menu .transX {
+    --_delay: .18s;
+}
+
+.promo-wrap .transX {
+    --_delay: .4s;
+}
+
+.nav-menu,
+.promo-wrap {
+    .transX {
+        transition-delay: calc(var(--_delay) * var(--_i));  /* take out the 4 - section to reverse */
+    }
+    :nth-child(4 of .transX).hidden {
+    /* it definitely works, don't.. don't worry never worry */
+    --_i: 4;
+    }
+    :nth-child(3 of .transX).hidden {
+        /* it definitely works, don't worry don't worry at all */
+        --_i: 3;
+    }
+    
+    :nth-child(2 of .transX).hidden {
+        /* it definitely works, don't worry */
+        --_i: 2;
+    }
+    
+    :nth-child(1 of.transX).hidden {
+        /* it definitely works, don't worry don't worry*/
+        --_i: 1;
+    }
+}
+
+
 
 a {
     text-decoration: none;
@@ -132,29 +159,33 @@ h4 {
 body {
     /* background-color: var(--brown-black); */
     padding: 0;
-    margin:0;
+    margin: 0;
 }
 
-header { /** Hero background image */
+header {
+    /** Hero background image */
     background-image: linear-gradient(rgba(31, 21, 12, .8), #120906), url(media/coffee_banner.jpg);
     background-position: center;
     background-size: cover;
 }
 
-nav a { /*nav menu a attributes */
+nav a {
+    /*nav menu a attributes */
     text-decoration: none;
     transition: 0.2s ease-out;
 }
 
-nav a h3 { /*nav menu h3 attributes */
+nav a h3 {
+    /*nav menu h3 attributes */
     padding: 0 4%;
     transition: 0.2s ease-out;
 }
 
-nav a h3::after { /* hover animation for the nav menu */
+nav a h3::after {
+    /* hover animation for the nav menu */
     content: '';
     width: 100%;
-    height:3px;
+    height: 3px;
     background: var(--brown-3);
     display: block;
     margin: initial;
@@ -173,34 +204,40 @@ nav a h3:hover {
     border-radius: 10px;
 }
 
-nav a h3:hover::after { 
+nav a h3:hover::after {
     transform: scaleX(100%);
 }
 
-header img { /* Big Logo */
+header img {
+    /* Big Logo */
     width: 20rem;
     margin: 4.4rem 0rem 1rem;
 }
 
-span#line { /*Intersecting line to seperate title from slogan */
+span#line {
+    /*Intersecting line to seperate title from slogan */
     width: 3px;
     height: 100px;
     background-color: var(--brown-2);
     margin: 0 30px;
 }
 
-h2 i { /* what makes COFFEE look different */
+h2 i {
+    /* what makes COFFEE look different */
     font-weight: 800;
     color: #caa07d;
 }
+
 /*? I want this to appear on delay and only if the header is still on screen after 5 seconds or so */
-h2#arrowDown { /* The Arrow */
+h2#arrowDown {
+    /* The Arrow */
     margin-left: 1.28rem;
     font-size: 48px;
     font-weight: 500;
 }
 
-div#wave { /* avoids pixels showing white between wave and header, leading to a seamless look */
+div#wave {
+    /* avoids pixels showing white between wave and header, leading to a seamless look */
     transform: translateY(-4px);
 }
 
@@ -212,9 +249,12 @@ div#wave { /* avoids pixels showing white between wave and header, leading to a 
 /*TODO ~~~ PROMOTIONS */
 
 .promo-wrap {
-    display: flex; /* Added */
-    flex-direction: row; /* Added */
-    align-items: center; /* Added */
+    display: flex;
+    /* Added */
+    flex-direction: row;
+    /* Added */
+    align-items: center;
+    /* Added */
     justify-content: space-between;
 
     padding-inline: 1.4rem;
@@ -260,12 +300,13 @@ div#wave { /* avoids pixels showing white between wave and header, leading to a 
 
 /*~~ About Us */
 
-svg#underline { /* the underline */
+svg#underline {
+    /* the underline */
     width: 70vw;
     transform: translateY(-12px);
 }
 
-.about .row > * {
+.about .row>* {
     margin: 1%;
 }
 
@@ -291,18 +332,18 @@ svg#underline { /* the underline */
     text-align: right;
 
     color: var(--brown-black);
-    transform: translate(70px,0);
+    transform: translate(70px, 0);
     z-index: 4;
     cursor: pointer;
 
-    transition:  all .23s ease-in-out;
+    transition: all .23s ease-in-out;
 }
 
 .box-content #button::before {
     content: url(media/coffee_button.svg);
     position: absolute;
     min-width: 275%;
-    transform: translate(-70px,-5px);
+    transform: translate(-70px, -5px);
     z-index: -1;
 
     transition: all .3s ease-in-out;
@@ -311,35 +352,38 @@ svg#underline { /* the underline */
 /* button hover */
 @-webkit-keyframes scale-up-ver-bottom {
     0% {
-      -webkit-transform: scaleY(0);
-              transform: scaleY(0);
-      -webkit-transform-origin: 0% 100%;
-              transform-origin: 0% 100%;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
     }
+
     100% {
-      -webkit-transform: scaleY(1);
-              transform: scaleY(1);
-      -webkit-transform-origin: 0% 100%;
-              transform-origin: 0% 100%;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
     }
-  }
+}
+
 @keyframes scale-up-ver-bottom {
     0% {
         -webkit-transform: scaleY(0);
-                transform: scaleY(0);
+        transform: scaleY(0);
         -webkit-transform-origin: 0% 100%;
-                transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
     }
+
     100% {
         -webkit-transform: scaleY(1);
-                transform: scaleY(1);
+        transform: scaleY(1);
         -webkit-transform-origin: 0% 100%;
-                transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
     }
 }
 
 .hero-btn {
-    position:relative;
+    position: relative;
     margin-right: auto;
     margin-left: 1rem;
     min-width: 50%;
@@ -348,8 +392,8 @@ svg#underline { /* the underline */
     background-color: #C6B6A9;
     border-radius: 12px 2px;
     border: none;
-    color:#1b0a02;
-    overflow:hidden;
+    color: #1b0a02;
+    overflow: hidden;
     font-weight: 700;
     font-size: 20px;
     text-decoration: none;
@@ -369,15 +413,15 @@ svg#underline { /* the underline */
     width: 100%;
     height: 100%;
     background-color: var(--brown-black);
-    opacity:0;
+    opacity: 0;
     z-index: 1;
-    -webkit-animation: scale-up-ver-bottom 3s cubic-bezier(0,.24,1,.59) infinite;
-    animation: scale-up-ver-bottom 3s cubic-bezier(0,.24,1,.59) infinite;
+    -webkit-animation: scale-up-ver-bottom 3s cubic-bezier(0, .24, 1, .59) infinite;
+    animation: scale-up-ver-bottom 3s cubic-bezier(0, .24, 1, .59) infinite;
 }
 
 .hero-btn:hover::before {
-    opacity:.4;
-    color:#fff;
+    opacity: .4;
+    color: #fff;
     z-index: 1;
 }
 
@@ -386,7 +430,7 @@ svg#underline { /* the underline */
 }
 
 /* Gif lines */
-.about img { 
+.about img {
     width: 35vw;
     border-radius: 1rem;
 }
@@ -440,7 +484,7 @@ svg#underline { /* the underline */
     }
 }
 
-.scroller-items > * {
+.scroller-items>* {
     border-radius: .26rem;
 }
 
@@ -490,6 +534,7 @@ svg#underline { /* the underline */
 .coffee h4 {
     color: #dedede;
 }
+
 /* grid section */
 .grid-box {
     display: grid;
@@ -507,7 +552,7 @@ svg#underline { /* the underline */
     flex-direction: row-reverse;
 }
 
-.grid-box > * {
+.grid-box>* {
     margin: 8px;
     padding: 1rem;
 
@@ -517,7 +562,8 @@ svg#underline { /* the underline */
     transition: .26s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.grid-box > * h2 { /* the i and circle */
+.grid-box>* h2 {
+    /* the i and circle */
     font-size: 18px;
     margin-bottom: auto;
     padding-inline: 10px;
@@ -526,10 +572,11 @@ svg#underline { /* the underline */
     border-radius: 10rem;
 }
 
-.grid-box > *:hover {
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, .4) 50%, rgba(0,0,0,.2) 100%);
+.grid-box>*:hover {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, .4) 50%, rgba(0, 0, 0, .2) 100%);
 }
+
 /** The hover cards for the coffee grid boxes */
 .grid-items[data-tool-tip] {
     position: relative;
@@ -537,20 +584,20 @@ svg#underline { /* the underline */
 
 .grid-items[data-tool-tip]::after {
     content: attr(data-tool-tip);
-    display:block;
-    position:absolute;
+    display: block;
+    position: absolute;
     max-width: 95%;
     max-height: 50%;
     background-color: rgb(182, 182, 182);
-    padding:.6em .8em;
-    color:black;
+    padding: .6em .8em;
+    color: black;
     border-radius: .6rem;
     top: 0;
     z-index: 2;
 
     transform: scaleY(0);
     transform-origin: 50% 0%;
-    transition:all .3s cubic-bezier(.43,.27,.48,1);
+    transition: all .3s cubic-bezier(.43, .27, .48, 1);
 }
 
 .grid-items[data-tool-tip]:hover::after {
@@ -576,7 +623,7 @@ svg#underline { /* the underline */
     text-align: left; /*! This isn't working ~ fixed by margin auto-ing each child of this selected element */
 /* } */
 
-.col.one > * {
+.col.one>* {
     margin-left: auto;
 }
 
@@ -611,13 +658,15 @@ input {
     font-size: 18px;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: var(--brown-black);
     font-family: 'Kanit', sans-serif, 'Roboto Condensed', sans-serif;
 
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     background-color: #dedede;
 }
 
@@ -676,12 +725,12 @@ textarea {
 /*TODO footer */
 
 footer {
-    background:var(--brown-black);
-    background: linear-gradient(14deg, rgba(0,0,0,1) 10%, rgba(41,21,13,1) 82%);
+    background: var(--brown-black);
+    background: linear-gradient(14deg, rgba(0, 0, 0, 1) 10%, rgba(41, 21, 13, 1) 82%);
 }
 
 footer svg {
-    width:34px;
+    width: 34px;
     height: 80%;
     margin-inline: 6px;
     color: #fff;
@@ -727,7 +776,9 @@ div#footer-text p {
     padding-bottom: .6rem;
 }
 
-div#footer-text p, footer .links h3, footer h4 {
+div#footer-text p,
+footer .links h3,
+footer h4 {
     color: #dedede;
 }
 
