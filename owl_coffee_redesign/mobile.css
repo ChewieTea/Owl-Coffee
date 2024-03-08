@@ -5,6 +5,22 @@ Extra comments:
     - Will change most .row flex directions into columns to make use of the vertical space and avoid the overflow issues from the first product.
     - Has a nav menu for ease of use across the website.
 */
+
+.transY {
+    transform: translateY(35%);
+}
+
+.transX {
+    transform: translateX(-35%);
+}
+
+.upward {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) translateX(0);
+    scale: 1;
+}
+
 h1 {
     margin: 0;
     font-size: 30px;
