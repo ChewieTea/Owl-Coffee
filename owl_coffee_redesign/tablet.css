@@ -53,13 +53,17 @@ h4 {
 }
 
 .promo-box.row {
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.promo-box img {
+.promo-box img#cup {
     --screen-width: 100vw;
     width: calc((var(--screen-width) / 100) * 7);
 
+}
+
+img#poly1 {
+    width: 95%;
 }
 
 .promo-box.row img {

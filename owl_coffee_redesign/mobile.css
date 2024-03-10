@@ -122,9 +122,9 @@ span#line { /*Intersecting line to seperate title from slogan */
 }
 
 .promo-box {
-    background: url(media/polygon.png);
-    background-repeat: no-repeat;
-    padding: 1rem 2rem .6rem;
+    /* background: url(media/polygon.png);
+    background-repeat: no-repeat; */
+    /* padding: 1rem 2rem .6rem; */
     margin: .2rem 0;
     cursor: pointer;
     transition: all .14s ease-out;
@@ -132,8 +132,13 @@ span#line { /*Intersecting line to seperate title from slogan */
 
 .promo-box.row {
     min-width: 60vw;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+
+img#poly1 {
+    width: 100%;
+}
+
 
 /*TODO ~~ box content */
 

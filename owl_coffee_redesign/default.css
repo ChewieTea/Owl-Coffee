@@ -16,7 +16,7 @@
 
 @media(prefers-reduced-motion) {
     :root {
-        scroll-behavior: auto;
+        scroll-behavior: auto; /*! check this is correct */
     }
 
     .scroller-items {
@@ -260,19 +260,35 @@ div#wave {
     padding-inline: 1.4rem;
 }
 
-.promo-wrap img {
+.promo-wrap img#cup {
     max-width: 80px;
 }
 
 .promo-box {
-    background: url(media/polygon.png);
-    background-repeat: no-repeat;
+    /* background: url(media/polygon.png); Not worth it, the code below is better for responsiveness.
+    background-repeat: no-repeat; */
 
     flex-basis: 33%;
 
     padding: 1rem 0 .6rem;
     cursor: pointer;
     transition: all .14s ease-out;
+}
+
+div#poly1 {
+    position: relative;
+}
+
+div#poly1 > :not(img#poly1) {
+    z-index: 3;
+}
+
+img#poly1 {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    z-index: 1;
 }
 
 .promo-box:hover {
