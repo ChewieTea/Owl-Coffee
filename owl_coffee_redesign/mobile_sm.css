@@ -66,10 +66,6 @@ button#shop {
     padding: .5rem 3rem;
 }
 
-.coffee-wave.bottom {
-    transform: translateY(-86px);
-}
-
 .grid-box {
     display: grid;
     grid-template-columns: 1fr;

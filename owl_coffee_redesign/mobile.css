@@ -189,9 +189,7 @@ img#poly1 {
 }
 
 /* i'm going to make a calc function which will calculate how much the svg needs to move up based on the screen vw */
-.coffee-wave.bottom {
-    transform: translateY(-82px);
-}
+
 
 /**Making the grid 2x3 instead of 3x2 */
 .grid-box {

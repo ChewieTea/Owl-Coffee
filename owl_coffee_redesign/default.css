@@ -394,6 +394,10 @@ img#poly1 {
 
 /*~~ About Us */
 
+.about {
+    margin-top: 3rem;
+}
+
 svg#underline {
     /* the underline */
     width: 70vw;
@@ -595,7 +599,7 @@ svg#underline {
     min-width: 30%;
 
     margin-top: .75rem;
-    margin-bottom: 80px;
+    margin-bottom: 4%;
     padding: .5rem 1rem;
     margin-inline: auto;
 }
@@ -607,8 +611,11 @@ svg#underline {
 }
 
 /*TODO COFFEE */
-.coffee-wave {
-    transform: translateY(-66px);
+.coffee-wave:not(.coffee-wave.bottom) {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -40px;
 }
 
 .coffee-wave svg {
@@ -616,13 +623,16 @@ svg#underline {
 }
 
 .coffee-wave.bottom {
-    transform: translateY(-76px);
+    width: 100%;
+    position: absolute;
+    left: 0;
 }
 
 .section-coffee {
+    position: relative;
     padding: 1rem;
     background: #29150D;
-    transform: translateY(-74px);
+    transform: translateY(-2%);
 }
 
 .coffee h4 {
