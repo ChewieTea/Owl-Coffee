@@ -141,6 +141,7 @@ span#line { /*Intersecting line to seperate title from slogan */
     justify-content: space-between;
 
     padding-inline: 1.4rem;
+    margin-bottom: 0;
 }
 
 .promo-box {
@@ -163,6 +164,14 @@ img#poly1 {
 
 
 /*TODO ~~ box content */
+
+.about {
+    margin-top: 0;
+}
+
+.about-background {
+    padding-block: 4px;
+}
 
 .about .row {
     flex-direction: column;
@@ -195,7 +204,15 @@ img#poly1 {
 /*TODO ~~ coffee */
 /* making padding smaller for the whole section */
 .section-coffee {
-    padding: .35rem .35rem 2rem .35rem;
+     padding:.35rem .35rem 2rem .35rem; /** it was the bloody padding this whole time i'm going to cry */
+}
+
+.coffee-wave:not(.coffee-wave.bottom) {
+     transform: translateY(-1.35rem);
+}
+
+.coffee-wave.bottom {
+    transform: translateY(2rem);
 }
 
 /* i'm going to make a calc function which will calculate how much the svg needs to move up based on the screen vw */

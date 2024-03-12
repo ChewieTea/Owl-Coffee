@@ -185,6 +185,9 @@
     margin-bottom: 2rem;
 }
 
+body {
+    --screen-width: 100%;
+}
 
 a {
     text-decoration: none;
@@ -340,6 +343,7 @@ div#wave {
 
 .promo-wrap img#cup {
     max-width: 80px;
+    margin-left: 25px;
 }
 
 .promo-box {
@@ -383,10 +387,6 @@ img#poly1 {
     margin-bottom: auto;
 }
 
-.promo-box.row img {
-    margin-left: 25px;
-}
-
 .promo-box.row h3 {
     margin-left: 10px;
     color: #000;
@@ -395,7 +395,7 @@ img#poly1 {
 /*~~ About Us */
 
 .about {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 svg#underline {
@@ -611,12 +611,13 @@ svg#underline {
 }
 
 /*TODO COFFEE */
-.coffee-wave:not(.coffee-wave.bottom) {
+/* .coffee-wave:not(.coffee-wave.bottom) {
     position: absolute;
     width: 100%;
     left: 0;
-    top: -40px;
-}
+    top: calc((980 / 100) * 30);
+    outline: yellow 1px solid;
+    /* transform: translateY(-12px); */
 
 .coffee-wave svg {
     background-color: transparent;
@@ -626,13 +627,15 @@ svg#underline {
     width: 100%;
     position: absolute;
     left: 0;
+    transform: translateY(1rem);
+    outline: green 2px solid;
 }
 
 .section-coffee {
     position: relative;
-    padding: 1rem;
-    background: #29150D;
-    transform: translateY(-2%);
+    padding: 1.3rem;
+    background: linear-gradient(rgb(23, 22, 22), #29150D 4%);
+    /* transform: translateY(-2%); */
 }
 
 .coffee h4 {
