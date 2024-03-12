@@ -30,23 +30,29 @@ h1 {
 
 h2 {
     margin: 0;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 400;
     color: #fff;
 }
 
 h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     color: #fff;
 }
 
 h4 {
     margin: 0;
-    font-size: 28px;
+    font-size: 26px;
     color: #000;
 }
+
+p {
+    margin: 0;
+    font-size: 10px;
+}
+
 
 /* body {
     background-color: yellow;
@@ -176,6 +182,10 @@ img#poly1 {
     margin-left: auto;
 }
 
+.box-content p {
+    margin-bottom: .6rem;
+}
+
 /*TODO ~~ Merch */
 .merch .hero-btn h4 {
     font-size: 18px;
@@ -280,12 +290,12 @@ footer .media svg {
     width: 24px;
 }
 
-footer img#logo {
+/* footer img#logo {
     display: none;
-}
+} */
 
 footer .links.row {
-    flex-direction: column;
+    display: none;
 }
 
 footer .links.col {
