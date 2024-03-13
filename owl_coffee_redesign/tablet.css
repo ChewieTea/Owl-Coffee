@@ -81,6 +81,10 @@ img#poly1 {
 
 /*TODO box content */
 
+.about-background {
+    margin-bottom: 0;
+}
+
 .about .row {
     flex-direction: column;
 }

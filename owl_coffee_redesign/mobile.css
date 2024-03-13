@@ -7,7 +7,7 @@ Extra comments:
 */
 
 .transY {
-    transform: translateY(35%);
+    transform: translateY(25%);
 }
 
 .transX {
@@ -141,7 +141,8 @@ span#line { /*Intersecting line to seperate title from slogan */
     justify-content: space-between;
 
     padding-inline: 1.4rem;
-    margin-bottom: 0;
+    margin-bottom: -.5rem;
+    margin-top: -.8rem;
 }
 
 .promo-box {
@@ -215,6 +216,10 @@ img#poly1 {
     transform: translateY(2rem);
 }
 
+.coffee .col {
+    padding: 1rem 1rem .3rem;
+}
+
 /* i'm going to make a calc function which will calculate how much the svg needs to move up based on the screen vw */
 
 
@@ -248,6 +253,10 @@ img#poly1 {
 }
 
 /*TODO contact section */
+
+.contact :first-child {
+    margin-bottom: 8px;
+}
 
 .contact .row {
     flex-direction: column;

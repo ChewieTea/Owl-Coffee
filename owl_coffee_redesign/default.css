@@ -237,7 +237,7 @@ h4 {
 }
 
 body {
-    /* background-color: var(--brown-black); */ /* TODO:think on this*/
+    /* background-color: var(--brown-black); TODO:think on this */
     padding: 0;
     margin: 0;
 }
@@ -566,7 +566,7 @@ svg#underline {
     -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
     mask: linear-gradient(90deg, transparent 5%, white 30%, white 70%, transparent 95%);
 
-    outline: 3px solid lime;
+    /* outline: 3px solid lime; */
 
 }
 
@@ -628,7 +628,7 @@ svg#underline {
     position: absolute;
     left: 0;
     transform: translateY(1rem);
-    outline: green 2px solid;
+    /* outline: green 2px solid; */
 }
 
 .section-coffee {
