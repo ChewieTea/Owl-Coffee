@@ -10,6 +10,9 @@
     <link rel="stylesheet" media="all and (max-width: 950px)" href="tablet.css"> <!-- ?Tablet CSS Version -->
     <link rel="stylesheet" media="all and (max-width: 550px)" href="mobile.css"> <!-- ?Mobile/Phone CSS Version -->
     <link rel="stylesheet" media="all and (max-width: 310px)" href="mobile_sm.css"> <!--? SMALL Mobile/Phone CSS Version (grid)-->
+
+    <link rel="preload" href="media/coffee_banner.jpg" fetchpriority="high" as="image" type="image/jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Roboto+Condensed&display=swap" rel="stylesheet">
@@ -19,10 +22,11 @@
     <header class="col" id="hero-section"> <!-- a Gridbox to nest everything nicely (centred) -->
         <nav class="nav-menu row" id="nav-menu"> <!--TODO align these properly and create a hover effect to play with -->
             <i class="fa-solid fa-circle-xmark icons" id="close" onclick="hideMenu()"></i> <!-- It has appeared -->
-            <a class="transX hidden" href="#about-section"><h3>ABOUT</h3></a>
             <a class="transX hidden" href="#merch-section"><h3>MERCH</h3></a>
             <a class="transX hidden" href="#coffee-section"><h3>COFFEE</h3></a>
+            <a class="transX hidden" href="#about-section"><h3>ABOUT</h3></a>
             <a class="transX hidden" href="#contact-section"><h3>CONTACT</h3></a>
+            <a class="transX hidden" href=""><h3>CAREERS</h3></a>
         </nav>
         <i class="fa-solid fa-bars icons" id="menu" onclick="showMenu()"></i>
         <img src="media\logo.png" class="scale hidden" alt="Owl in a coffee cup.">
@@ -179,8 +183,8 @@
                     <path d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8Zm3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8Zm3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8Z"/>
                 </svg></a>
             </div>
-            <img src="media/GIF_5.gif" alt="Short video of an owl popping out of it's coffee cup"> <!-- Gif -->
-
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9471.708452074425!2d-2.311087697642616!3d53.594762142192806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ba4dca3de19c9%3A0x79780c75c67a171b!2sAge%20UK%20Bury%20The%20Rock%20Charity%20Shop!5e0!3m2!1sen!2suk!4v1708098890282!5m2!1sen!2suk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
         </div>
 </div>
 </section>
@@ -190,8 +194,6 @@
         <path d="M0.566243 14.5L15 28.9338L29.4338 14.5L15 0.0662432L0.566243 14.5ZM981.434 14.5L967 0.0662432L952.566 14.5L967 28.9338L981.434 14.5ZM15 17L967 17V12L15 12V17Z" fill="rgb(23, 22, 22)"/>
         </svg> <!-- underline -->  
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9471.708452074425!2d-2.311087697642616!3d53.594762142192806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ba4dca3de19c9%3A0x79780c75c67a171b!2sAge%20UK%20Bury%20The%20Rock%20Charity%20Shop!5e0!3m2!1sen!2suk!4v1708098890282!5m2!1sen!2suk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
     <div class="row">
         <div class="col one">
             <svg class="transX hidden" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -279,7 +281,7 @@
                 <a href="#contact-section"><h3>CONTACT</h3></a>
             </div>
         </div>
-        <img id="logo" class="hidden rubberBand" src="media/logo.png" alt="">
+        <a href=""><img id="logo" class="hidden rubberBand" src="media/logo.png" alt=""></a>
         <!-- Footer -->
 
     </div>

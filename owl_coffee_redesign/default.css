@@ -87,6 +87,10 @@
     .transX {
         transition-delay: calc(var(--_delay) * var(--_i));  /* take out the 4 - section to reverse */
     }
+    :nth-child(5 of .transX).hidden {
+        /* it definitely works, don't.. don't worry never worry */
+        --_i: 5;
+    }
     :nth-child(4 of .transX).hidden {
     /* it definitely works, don't.. don't worry never worry */
     --_i: 4;
@@ -713,9 +717,12 @@ svg#underline {
 
 /* Contact us */
 
-.contact iframe {
-    width: 90%;
+iframe {
+    width: clamp(100px, calc(100vw / 1.5), 80vw);
+    min-width: 50vw;
     min-height: 50vh;
+    border: none;
+    border-radius: 4px;
 }
 
 .contact .row {
