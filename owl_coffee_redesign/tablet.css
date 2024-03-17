@@ -128,8 +128,8 @@ img#poly1 {
 
 /*TODO contact section */
 
-.contact iframe {
-    width: 95%;
+iframe {
+    width: clamp(100px, calc(100vw / 1.2), 50vw);
     border-radius: .4rem;
 }
 

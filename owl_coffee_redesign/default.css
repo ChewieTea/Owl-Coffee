@@ -396,6 +396,185 @@ img#poly1 {
     color: #000;
 }
 
+
+/** Merch section */
+
+.merch-wave {
+    transform: translateY(8px);
+}
+
+/*TODO background */
+.merch {
+    background-color: rgb(23, 22, 22);
+}
+
+.merch h4 {
+    color: #dedede;
+}
+
+.scroller {
+    max-width: 90%;
+}
+
+
+.scroller-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+    mask: linear-gradient(90deg, transparent 5%, white 30%, white 70%, transparent 95%);
+
+    /* outline: 3px solid lime; */
+    
+}
+
+.scroller[data-animated="true"] .scroller-items {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - .5rem));
+    }
+}
+
+.scroller-items>* {
+    border-radius: .26rem;
+}
+
+
+/* 
+.scroller-items {
+    -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+    mask: linear-gradient(90deg, transparent 5%, white 30%, white 70%, transparent 95%);
+} */
+
+/*TODO button looks */
+
+.merch .hero-btn {
+    min-width: 30%;
+    
+    margin-top: .75rem;
+    margin-bottom: 4%;
+    padding: .5rem 1rem;
+    margin-inline: auto;
+}
+
+.merch .hero-btn h4 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--brown-black)
+}
+
+/*TODO COFFEE */
+/* .coffee-wave:not(.coffee-wave.bottom) {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: calc((980 / 100) * 30);
+    outline: yellow 1px solid;
+    /* transform: translateY(-12px); */
+    
+    .coffee-wave svg {
+        background-color: transparent;
+}
+
+.coffee-wave.bottom {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transform: translateY(1rem);
+    /* outline: green 2px solid; */
+}
+
+.section-coffee {
+    position: relative;
+    padding: 1.3rem;
+    background: linear-gradient(rgb(23, 22, 22), #29150D 4%);
+    /* transform: translateY(-2%); */
+}
+
+.coffee h4 {
+    color: #dedede;
+}
+
+/* grid section */
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.grid-box img {
+    max-width: 50%;
+}
+
+.row.grid-items {
+    flex-direction: row-reverse;
+}
+
+.grid-box>* {
+    margin: 8px;
+    padding: 1rem;
+    
+    border: 2px #dedede solid;
+    border-radius: .5em;
+
+    transition: .26s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.grid-box>* h2 {
+    /* the i and circle */
+    font-size: 18px;
+    margin-bottom: auto;
+    padding-inline: 10px;
+    
+    border: 1.6px #dedede solid;
+    border-radius: 10rem;
+}
+
+.grid-box>*:hover {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, .4) 50%, rgba(0, 0, 0, .2) 100%);
+}
+
+/** The hover cards for the coffee grid boxes */
+.grid-items[data-tool-tip] {
+    position: relative;
+}
+
+.grid-items[data-tool-tip]::after {
+    content: attr(data-tool-tip);
+    display: block;
+    position: absolute;
+    max-width: 95%;
+    max-height: 50%;
+    background-color: rgb(182, 182, 182);
+    padding: .6em .8em;
+    color: black;
+    border-radius: .6rem;
+    top: 0;
+    z-index: 2;
+    
+    transform: scaleY(0);
+    transform-origin: 50% 0%;
+    transition: all .3s cubic-bezier(.43, .27, .48, 1);
+}
+
+.grid-items[data-tool-tip]:hover::after {
+    transform: scaleY(1);
+}
+
 /*~~ About Us */
 
 .about {
@@ -414,7 +593,7 @@ svg#underline {
 
 /*Text box stuff */
 .box-content {
-    max-width: 40vw;
+    max-width: 30vw;
     min-width: 20vw;
     background-color: var(--brown-black);
     border-radius: 1rem;
@@ -422,8 +601,9 @@ svg#underline {
 
 .box-content p {
     color: #D9D9D9;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 2rem;
+    margin-top: 0;
     margin-bottom: 1.6rem;
 }
 
@@ -537,193 +717,15 @@ svg#underline {
     border-radius: 1rem;
 }
 
-/** Merch section */
-
-.merch-wave {
-    transform: translateY(8px);
-}
-
-/*TODO background */
-.merch {
-    background-color: rgb(23, 22, 22);
-}
-
-.merch h4 {
-    color: #dedede;
-}
-
-.scroller {
-    max-width: 90%;
-}
-
-
-.scroller-items {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.scroller[data-animated="true"] {
-    overflow: hidden;
-    -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-    mask: linear-gradient(90deg, transparent 5%, white 30%, white 70%, transparent 95%);
-
-    /* outline: 3px solid lime; */
-
-}
-
-.scroller[data-animated="true"] .scroller-items {
-    width: max-content;
-    flex-wrap: nowrap;
-    animation: scroll 20s linear infinite;
-}
-
-@keyframes scroll {
-    to {
-        transform: translate(calc(-50% - .5rem));
-    }
-}
-
-.scroller-items>* {
-    border-radius: .26rem;
-}
-
-
-/* 
-.scroller-items {
-    -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-    mask: linear-gradient(90deg, transparent 5%, white 30%, white 70%, transparent 95%);
-} */
-
-/*TODO button looks */
-
-.merch .hero-btn {
-    min-width: 30%;
-
-    margin-top: .75rem;
-    margin-bottom: 4%;
-    padding: .5rem 1rem;
-    margin-inline: auto;
-}
-
-.merch .hero-btn h4 {
-    font-size: 24px;
-    font-weight: 500;
-    color: var(--brown-black)
-}
-
-/*TODO COFFEE */
-/* .coffee-wave:not(.coffee-wave.bottom) {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: calc((980 / 100) * 30);
-    outline: yellow 1px solid;
-    /* transform: translateY(-12px); */
-
-.coffee-wave svg {
-    background-color: transparent;
-}
-
-.coffee-wave.bottom {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    transform: translateY(1rem);
-    /* outline: green 2px solid; */
-}
-
-.section-coffee {
-    position: relative;
-    padding: 1.3rem;
-    background: linear-gradient(rgb(23, 22, 22), #29150D 4%);
-    /* transform: translateY(-2%); */
-}
-
-.coffee h4 {
-    color: #dedede;
-}
-
-/* grid section */
-.grid-box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-}
-
-.grid-box img {
-    max-width: 50%;
-}
-
-.row.grid-items {
-    flex-direction: row-reverse;
-}
-
-.grid-box>* {
-    margin: 8px;
-    padding: 1rem;
-
-    border: 2px #dedede solid;
-    border-radius: .5em;
-
-    transition: .26s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.grid-box>* h2 {
-    /* the i and circle */
-    font-size: 18px;
-    margin-bottom: auto;
-    padding-inline: 10px;
-
-    border: 1.6px #dedede solid;
-    border-radius: 10rem;
-}
-
-.grid-box>*:hover {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, .4) 50%, rgba(0, 0, 0, .2) 100%);
-}
-
-/** The hover cards for the coffee grid boxes */
-.grid-items[data-tool-tip] {
-    position: relative;
-}
-
-.grid-items[data-tool-tip]::after {
-    content: attr(data-tool-tip);
-    display: block;
-    position: absolute;
-    max-width: 95%;
-    max-height: 50%;
-    background-color: rgb(182, 182, 182);
-    padding: .6em .8em;
-    color: black;
-    border-radius: .6rem;
-    top: 0;
-    z-index: 2;
-
-    transform: scaleY(0);
-    transform-origin: 50% 0%;
-    transition: all .3s cubic-bezier(.43, .27, .48, 1);
-}
-
-.grid-items[data-tool-tip]:hover::after {
-    transform: scaleY(1);
-}
-
-/* Contact us */
-
 iframe {
-    width: clamp(100px, calc(100vw / 1.5), 80vw);
+    width: clamp(100px, calc(100vw / 1.5), 30vw);
     min-width: 50vw;
     min-height: 50vh;
     border: none;
     border-radius: 4px;
 }
+
+/* Contact us */
 
 .contact .row {
     background-color: var(--brown-black);
@@ -735,10 +737,10 @@ iframe {
 
 /* .contact .col.one {
     text-align: left; /*! This isn't working ~ fixed by margin auto-ing each child of this selected element */
-/* } */
-
-.col.one>* {
-    margin-left: auto;
+    /* } */
+    
+    .col.one>* {
+        margin-left: auto;
 }
 
 .contact svg {
@@ -764,7 +766,7 @@ input {
     width: 25svw;
     margin: 1%;
     margin-right: auto;
-
+    
     padding: .5em;
     background-color: #DFD6CE;
     border: none;
