@@ -181,7 +181,7 @@
 } 
 
 .about-background {
-    background-image: linear-gradient(rgba(225, 194, 194, 0.75), rgba(225, 194, 194, 0.75)), url("media/coffe-backdrop.png");
+    background-image: linear-gradient(rgba(225, 194, 194, 0.75), rgba(225, 194, 194, 0.75)), url("media/coffe-backdrop.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
